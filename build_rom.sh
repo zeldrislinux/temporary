@@ -5,7 +5,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 # build rom
 source build/envsetup.sh
-lunch nezuko_X00QD-userdebug
+lunch p404_X00QD-eng
 mka bacon -j9
 
 # upload rom
