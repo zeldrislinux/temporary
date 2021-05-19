@@ -6,7 +6,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 # build rom
 source build/envsetup.sh
 lunch nezuko_X00QD-userdebug
-mka bacon -j8
+mka bacon -j9
 
 # upload rom
 rclone copy out/target/product/X00QD/*2021*.zip cirrus:X00QD -P
