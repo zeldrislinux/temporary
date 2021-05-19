@@ -5,7 +5,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 # build rom
 source build/envsetup.sh
-lunch p404_X00QD-eng
+lunch p404_X00QD-userdebug
 make p404
 
 # upload rom
