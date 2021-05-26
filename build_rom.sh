@@ -26,7 +26,7 @@ cd ../../../..
 lunch nad_RMX1941-userdebug
 export USE_GAPPS=true
 export SELINUX_IGNORE_NEVERALLOWS=true
-make init
+make init && repo forall -c 'git checkout .' || repo forall -c 'git checkout .'
 
 # upload 
 rclone copy out/target/product/RMX1941/*.zip cirrus:RMX1941 -P  
