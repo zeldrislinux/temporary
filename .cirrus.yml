@@ -33,7 +33,7 @@ task:
     - username=$(grep 'git clone' $CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d / -f 4)
 
     - cd ~/roms/$device-$rom_name-$username
-    - export CCACHE_DIR=/home/cirrus/$device-$rom_name-$username/ccache
+    - export CCACHE_DIR=~/roms/$device-$rom_name-$username/ccache
     - export CCACHE_EXEC=$(which ccache)
     - export USE_CCACHE=1
     - ccache -M 10G
@@ -46,7 +46,7 @@ task:
     - rom_name=$(grep init $CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d / -f 4)
     - username=$(grep 'git clone' $CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d / -f 4)
 
-    - export CCACHE_DIR=/home/cirrus/$device-$rom_name-$username/ccache
+    - export CCACHE_DIR=~/roms/$device-$rom_name-$username/ccache
     - ccache -s
   upload_script:
     - set -e
