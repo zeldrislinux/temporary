@@ -8,7 +8,7 @@ source build/envsetup.sh
 lunch lineage_surya-userdebug
 export SELINUX_IGNORE_NEVERALLOWS=true
 breakfast surya
-mka bacon
+mka init
 
 #if you are a patch user (which is really not normal and not recommended), then must put like this, `m aex || repo forall -c 'git checkout .'
 

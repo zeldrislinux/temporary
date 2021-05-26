@@ -1,6 +1,7 @@
 env:
     CIRRUS_CLONE_DEPTH: 1
     CIRRUS_LOG_TIMESTAMP: true
+    ROM_NAME: "grep init $CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d / -f 4"
 task:
   name: Build
   timeout_in: 4h
@@ -14,8 +15,6 @@ task:
         volumes:
           - /home/cirrus/roms:/home/cirrus/roms
           - /home/cirrus/.config:/home/cirrus/.config
-  env:
-    ROM_NAME: "grep init $CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d / -f 4"
   sync_script:
     - set -exv
     - mkdir -p ~/roms/$(bash -c "$ROM_NAME")
@@ -26,20 +25,19 @@ task:
     - bash -c "$command"
   build_script:
     - set -exv
-    - sleep 2h
     - cd ~/roms/$(bash -c "$ROM_NAME")
     - device=$(grep unch $CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d ' ' -f 2 | cut -d _ -f 2 | cut -d - -f 1)
-    - export CCACHE_DIR=/home/ci/ccache/$(bash -c "$ROM_NAME")/$device
+    - export CCACHE_DIR=/home/cirrus/ccache/$(bash -c "$ROM_NAME")/$device
     - export CCACHE_EXEC=$(which ccache)
     - export USE_CCACHE=1
-    - ccache -M 50G
+    - ccache -M 10G
     - ccache -z
     - command=$(tail $CIRRUS_WORKING_DIR/build_rom.sh -n +$(expr $(grep 'build/envsetup.sh' $CIRRUS_WORKING_DIR/build_rom.sh -n | cut -f1 -d:) - 1)| head -n -1)
     - bash -c "$command"
   ccache_stats_script:
     - set -exv
     - device=$(grep unch $CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d ' ' -f 2 | cut -d _ -f 2 | cut -d - -f 1)
-    - export CCACHE_DIR=/home/ci/ccache/$(bash -c "$ROM_NAME")/$device
+    - export CCACHE_DIR=/home/cirrus/ccache/$(bash -c "$ROM_NAME")/$device
     - ccache -s
   upload_script:
     - set -exv
