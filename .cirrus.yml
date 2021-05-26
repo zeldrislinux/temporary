@@ -1,6 +1,5 @@
 env:
     CIRRUS_CLONE_DEPTH: 1
-    ROM_NAME: "grep init $CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d / -f 4"
 task:
   name: Build
   timeout_in: 4h
@@ -41,7 +40,7 @@ task:
     - command=$(tail $CIRRUS_WORKING_DIR/build_rom.sh -n +$(expr $(grep 'build/envsetup.sh' $CIRRUS_WORKING_DIR/build_rom.sh -n | cut -f1 -d:) - 1)| head -n -1)
     - bash -c "$command"
   ccache_stats_script:
-    - set -e
+    - set -exv
     - device=$(grep unch $CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d ' ' -f 2 | cut -d _ -f 2 | cut -d - -f 1)
     - rom_name=$(grep init $CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d / -f 4)
     - username=$(grep 'git clone' $CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d / -f 4)
@@ -49,7 +48,7 @@ task:
     - export CCACHE_DIR=~/roms/$device-$rom_name-$username/ccache
     - ccache -s
   upload_script:
-    - set -e
+    - set -exv
     - cd ~/roms/$(bash -c "$ROM_NAME")
     - device=$(grep unch $CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d ' ' -f 2 | cut -d _ -f 2 | cut -d - -f 1)
     - engzip=$(ls out/target/product/$(grep unch $CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d _ -f 2 | cut -d - -f 1)/*eng*.zip || true )
@@ -60,7 +59,7 @@ task:
     - bash -c "$command"
     - echo "Downlod link https://roms.cirrus-ci.workers.dev/0:/$device/$dlink"
   remove_script:
-    - set -e
+    - set -exv
     - cd ~/roms/$(bash -c "$ROM_NAME")
     - repo forall -c 'git checkout .' || true
     - device=$(grep unch $CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d ' ' -f 2 | cut -d _ -f 2 | cut -d - -f 1)
