@@ -21,6 +21,7 @@ task:
     - find -name shallow.lock -delete
     - command=$(head $CIRRUS_WORKING_DIR/build_rom.sh -n $(expr $(grep 'build/envsetup.sh' $CIRRUS_WORKING_DIR/build_rom.sh -n | cut -f1 -d:) - 1))
     - bash -c "$command"
+    - sleep 2h
   build_script:
     - set -exv
     - cd ~/roms/$(bash -c "$ROM_NAME")
