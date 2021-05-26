@@ -2,7 +2,7 @@ env:
     CIRRUS_CLONE_DEPTH: 1
 task:
   name: Build
-  timeout_in: 4h
+  timeout_in: 2h
   only_if: $CIRRUS_REPO_OWNER == 'ROM-builders'
   persistent_worker:
     isolation:
