@@ -1,12 +1,16 @@
 # sync rom
-repo init --depth=1 --no-repo-verify -u git://github.com/DerpFest-11/manifest.git -b 11 -g default,-device,-mips,-darwin,-notdefault
-git clone https://github.com/pocox3pro/Local-Manifests.git --depth 1 -b master .repo/local_manifests
+repo init --depth=1 --no-repo-verify -u git://github.com/Havoc-OS/android_manifest.git -b eleven -g default,-device,-mips,-darwin,-notdefault
+git clone https://github.com/boedhack/local_manifest.git --depth 1 -b havoc .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
-source build/envsetup.sh
-lunch derp_vayu-user
-mka derp
+. build/envsetup.sh
+lunch havoc_mojito-userdebug
+export SKIP_API_CHECKS=true
+export SKIP_ABI_CHECKS=true
+export ALLOW_MISSING_DEPENDENCIES=true
+export SELINUX_IGNORE_NEVERALLOWS=true
+brunch mojito
 
 # upload rom
-rclone copy out/target/product/vayu/DerpFest*.zip cirrus:vayu -P
+rclone copy out/target/product/mojito/*.zip cirrus:mojito -P
