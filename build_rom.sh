@@ -9,4 +9,4 @@ lunch lineage_begonia-userdebug
 mka bacon
 
 # upload rom
-rclone copy out/target/product/begonia/Cherish-OS*.zip cirrus:begonia -P
+rclone copy out/target/product/begonia/CipherOS*.zip cirrus:begonia -P
