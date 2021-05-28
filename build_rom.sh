@@ -9,4 +9,4 @@ lunch styx_lavender-user
 m styx-ota
 
 # upload rom
-rclone copy out/target/product/vayu/styx*-UNOFFICIAL*.zip cirrus:lavender -P
+rclone copy out/target/product/lavender/styx*-UNOFFICIAL*.zip cirrus:lavender -P
