@@ -11,4 +11,4 @@ brunch violet
 
 # upload rom
 rclone copy out/target/product/violet/ShapeShiftOS*.zip cirrus:violet -P
-# 1
+
