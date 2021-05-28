@@ -47,10 +47,6 @@ then
 		exit 1
 	fi
 else
-fi
-
-if [[ $CIRRUS_BRANCH != 'pull/.*' ]]
-then
 	if [[ $CIRRUS_BRANCH != $device-$rom_name-* ]]
 	then
 		echo "Please use branch name like this device-Rom-Builder (Rom name must be matched from repo init line)"
