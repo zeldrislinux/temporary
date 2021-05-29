@@ -1,5 +1,5 @@
 #Sync ROM
-repo init --depth=1 -u https://github.com/Wave-Project/manifest -b r -g default,-device,-mips,-darwin,-notdefault
+repo init --depth=1 -u https://github.com/yashlearnpython/manifest.git -b r -g default,-device,-mips,-darwin,-notdefault
 
 git clone https://github.com/yashlearnpython/local_manifest.git --depth=1 -b wave-os .repo/local_manifests
 
