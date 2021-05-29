@@ -13,3 +13,4 @@ mka bacon
 
 # upload rom
 rclone copy out/target/product/RMX1805/LineageFE*RMX1805*.zip cirrus:RMX1805 -P
+
