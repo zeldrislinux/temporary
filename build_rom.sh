@@ -4,6 +4,7 @@ git clone https://github.com/DhruvChhura/manifest_personal.git --depth 1 -b mast
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
+
 source build/envsetup.sh
 lunch derp_ysl-user
 mka derp
