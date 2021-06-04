@@ -23,35 +23,25 @@ then
 fi
 
 clean_check=$(grep ' clean' $CIRRUS_WORKING_DIR/build_rom.sh | wc -l)
-if [[ $rm_check -gt 0 ]]
+if [[ $clean_check -gt 0 ]]
 then
 	echo Please dont use make clean. Server does make installclean by default, which is enough for most of the cases. 
 	exit 1
 fi
 
 clobber_check=$(grep ' clobber' $CIRRUS_WORKING_DIR/build_rom.sh | wc -l)
-if [[ $rm_check -gt 0 ]]
+if [[ $clobber_check -gt 0 ]]
 then
 	echo Please dont use make clobber. Server does make installclean by default, which is enough for most of the cases. 
 	exit 1
 fi
 
-rom_name=$(grep init $CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d / -f 4)
-device=$(grep unch $CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d ' ' -f 2 | cut -d _ -f 2 | cut -d - -f 1)
-
-if [[ $CIRRUS_BRANCH =~ 'pull/.*' ]]
+rclone_check=$(grep 'rclone copy' $CIRRUS_WORKING_DIR/build_rom.sh)
+rclone_string="rclone copy out/target/product/\$(grep unch \$CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d ' ' -f 2 | cut -d _ -f 2 | cut -d - -f 1)/*.zip cirrus:\$(grep unch \$CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d ' ' -f 2 | cut -d _ -f 2 | cut -d - -f 1) -P"
+if [[ $rclone_check != *$rclone_string* ]]
 then
-	if [[ $CIRRUS_CHANGE_MESSAGE != $device-$rom_name-* ]]
-	then
-		echo "Please use PR title/branch name like this device-Rom-Builder (Rom name must be matched from repo init line)"
-		exit 1
-	fi
-else
-	if [[ $CIRRUS_BRANCH != $device-$rom_name-* ]]
-	then
-		echo "Please use branch name/PR title like this device-Rom-Builder (Rom name must be matched from repo init line)"
-		exit 1
-	fi
+	echo Please follow rclone copy line of main branch.
+	exit 1
 fi
 
 echo Test passed
