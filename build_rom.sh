@@ -25,6 +25,7 @@ cd ../../../..
 # build
 . build/envsetup.sh
 lunch octavi_RMX1941-userdebug
+export OCTAVI_MAINTAINER=P_Salik16
 brunch RMX1941
 
 # upload build
