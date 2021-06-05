@@ -29,4 +29,4 @@ export OCTAVI_MAINTAINER=P_Salik16
 brunch RMX1941
 
 # upload build
-rclone copy out/target/product/$(grep unch $CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d ' ' -f 2 | cut -d _ -f 2 | cut -d - -f 1)/*Unofficial*.zip cirrus:$(grep unch $CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d ' ' -f 2 | cut -d _ -f 2 | cut -d - -f 1) -P
+rclone copy out/target/product/RMX1941/OctaviOS*Unofficial.zip
