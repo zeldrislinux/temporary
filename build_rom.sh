@@ -4,7 +4,7 @@ git clone https://github.com/cArN4gEisDeD/local_manifest.git --depth 1 -b pe .re
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8 || repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
-source build/envsetup.sh
+source build/envsetup.sh 
 lunch aosp_RMX1941-userdebug 
 export TZ=Asia/Dhaka #put before last build command
 mka bacon
