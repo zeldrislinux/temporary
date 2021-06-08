@@ -4,8 +4,8 @@ git clone https://github.com/flashokiller/mainfest_personal --depth 1 -b pa-ysl 
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8 || repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 #.
 # build rom
-#source build/envsetup.sh
-#lunch pa_ysl-userdebug
+source build/envsetup.sh
+lunch pa_ysl-userdebug
 export TZ=Asia/kolkata #put before last build command
 make bacon
 
