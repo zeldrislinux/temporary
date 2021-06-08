@@ -11,7 +11,7 @@ source build/envsetup.sh
 export CHERISH_MAINTAINER=Sundram
 export CHERISH_NONGAPPS=true
 lunch cherish_RMX1941-userdebug
-mka bacon
+mka cherish
 
 
 
