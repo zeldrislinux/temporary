@@ -1,19 +1,18 @@
 # sync rom
-repo init --depth=1 -u https://github.com/CherishOS/android_manifest.git -b eleven -g default,-device,-mips,-darwin,-notdefault
+repo init --depth=1 --no-repo-verify -u https://github.com/CherishOS/android_manifest.git -b eleven -g default,-device,-mips,-darwin,-notdefault
 
 git clone https://github.com/Yasundram/local_manifest --depth 1 -b main .repo/local_manifests
 
-repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
+repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j 30 || repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
+
 
 
 # build rom
 source build/envsetup.sh
 export CHERISH_MAINTAINER=Sundram
-export CHERISH_NONGAPPS=true
-lunch cherish_RMX1941-userdebug
-mka cherish
-
-
+export CHERISH_NONGAPPS=true 
+export TZ=Asia/Dhaka #put before last build command
+brunch RMX1941
 
 
 
