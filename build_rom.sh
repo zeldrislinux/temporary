@@ -8,12 +8,13 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 
 # build rom
-source build/envsetup.sh
+. build/envsetup.sh
+lunch cherish_RMX1941-userdebug
 export SKIP_ABI_CHECKS=true
 export CHERISH_MAINTAINER=Sundram
 export CHERISH_NONGAPPS=true 
 export TZ=Asia/Dhaka #put before last build command
-brunch RMX1941
+mka cherish
 
  
 
