@@ -9,6 +9,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 # build rom
 source build/envsetup.sh
+export SKIP_API_CHECKS=true
 export CHERISH_MAINTAINER=Sundram
 export CHERISH_NONGAPPS=true 
 export TZ=Asia/Dhaka #put before last build command
