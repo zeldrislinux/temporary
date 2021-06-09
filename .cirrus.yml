@@ -22,7 +22,7 @@ task:
     - device=$(grep unch $CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d ' ' -f 2 | cut -d _ -f 2 | cut -d - -f 1)
     - your_telegram_id=@ROM_builders_junk
     - show=$(cat $CIRRUS_WORKING_DIR/build_rom.sh)
-    - curl -s "https://api.telegram.org/bot${bot_api}/sendmessage" -d "text=<code>$device-$folder_name</code> Started
+    - curl -s "https://api.telegram.org/bot${bot_api}/sendmessage" -d "text=<code>$device-$rom_name</code> Started
       
       https://cirrus-ci.com/build/$CIRRUS_BUILD_ID
       
@@ -48,18 +48,16 @@ task:
           - /home/cirrus/roms:/home/cirrus/roms
           - /home/cirrus/ccache:/home/cirrus/ccache
           - /home/cirrus/.config:/home/cirrus/.config
-  env_script:
-    - env
 
   sync_script:
     - set -exv
+
     - rom_name=$(grep init $CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d / -f 4)
-    - same_rom=$(ps aux|grep /home/cirrus/roms/$folder_name|wc -l)
+    - same_rom=$(ps aux|grep /home/cirrus/roms/$rom_name|wc -l)
     - if [[ $same_rom -gt 1 ]]; then echo Please wait until same rom other running build is finished; exit 1; fi
-    - device=$(grep unch $CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d ' ' -f 2 | cut -d _ -f 2 | cut -d - -f 1)
-    - if [[ $CIRRUS_BRANCH = "pull/*" ]]; then folder_name=$CIRRUS_CHANGE_MESSAGE; else folder_name="$CIRRUS_BRANCH" 
-    - mkdir -p ~/roms/$folder_name
-    - cd ~/roms/$folder_name
+
+    - mkdir -p ~/roms/$rom_name
+    - cd ~/roms/$rom_name
     - rm -rf .repo/local_manifests
     - command=$(head $CIRRUS_WORKING_DIR/build_rom.sh -n $(expr $(grep 'build/envsetup.sh' $CIRRUS_WORKING_DIR/build_rom.sh -n | cut -f1 -d:) - 1))
     - only_sync=$(grep 'repo sync' $CIRRUS_WORKING_DIR/build_rom.sh)
@@ -71,8 +69,8 @@ task:
     - rom_name=$(grep init $CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d / -f 4)
     - device=$(grep unch $CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d ' ' -f 2 | cut -d _ -f 2 | cut -d - -f 1)
 
-    - cd ~/roms/$folder_name
-    - export CCACHE_DIR=~/ccache/$folder_name/$device
+    - cd ~/roms/$rom_name
+    - export CCACHE_DIR=~/ccache/$rom_name/$device
     - export CCACHE_EXEC=$(which ccache)
     - export USE_CCACHE=1
     - ccache -M 10G
@@ -86,7 +84,7 @@ task:
     - rom_name=$(grep init $CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d / -f 4)
     - device=$(grep unch $CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d ' ' -f 2 | cut -d _ -f 2 | cut -d - -f 1)
 
-    - export CCACHE_DIR=~/ccache/$folder_name/$device
+    - export CCACHE_DIR=~/ccache/$rom_name/$device
     - ccache -s
 
   upload_script:
@@ -94,7 +92,7 @@ task:
     - rom_name=$(grep init $CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d / -f 4)
     - device=$(grep unch $CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d ' ' -f 2 | cut -d _ -f 2 | cut -d - -f 1)
 
-    - cd ~/roms/$folder_name
+    - cd ~/roms/$rom_name
     - engzip=$(ls out/target/product/$device/*eng*.zip || true)
     - otazip=$(ls out/target/product/$device/*-ota-*.zip || true)
     - awaken=$(ls out/target/product/$device/Project-Awaken*.zip || true)
@@ -109,7 +107,7 @@ task:
     - set -exv
     - rom_name=$(grep init $CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d / -f 4)
     - device=$(grep unch $CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d ' ' -f 2 | cut -d _ -f 2 | cut -d - -f 1)
-    - cd ~/roms/$folder_name
+    - cd ~/roms/$rom_name
     - rm -rf out/target/product/$device
 
 task:
@@ -129,6 +127,6 @@ task:
     - rom_name=$(grep init $CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d / -f 4)
     - device=$(grep unch $CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d ' ' -f 2 | cut -d _ -f 2 | cut -d - -f 1)
     - your_telegram_id=@ROM_builders_channel
-    - curl -s "https://api.telegram.org/bot${bot_api}/sendmessage" -d "text=<code>$device-$folder_name</code> Succeed
+    - curl -s "https://api.telegram.org/bot${bot_api}/sendmessage" -d "text=<code>$device-$rom_name</code> Succeed
       
       https://cirrus-ci.com/build/$CIRRUS_BUILD_ID" -d "chat_id=${your_telegram_id}" -d "parse_mode=HTML"
