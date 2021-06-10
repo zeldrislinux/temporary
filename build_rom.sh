@@ -1,4 +1,4 @@
-# sync rom
+# sync romm
 repo init --depth=1 --no-repo-verify -u https://github.com/AOSPA/manifest -b ruby -g default,-device,-mips,-darwin,-notdefault
 git clone https://github.com/flashokiller/mainfest_personal --depth 1 -b pa-ysl .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8 || repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
