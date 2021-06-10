@@ -6,7 +6,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 #build rom.
 #. build/envsetup.sh
 #lunch pa_ysl-userdebug
-export TZ=Asia/kolkata #put before last build command
+export TZ=Asia/kolkata #put before last build commandm...
 export ALLOW_DEPENDENCIES_MISSING=true
 ./rom-build.sh ysl
 # upload rom (if You don't need to upload multiple files, then you don't need to edit next line)........
