@@ -1,10 +1,9 @@
 task:
-    name: Sync test
+    name: Test
     timeout_in: 120m
     container:
-      image: apon77/aosp:latest
-      cpu: 2
-      memory: 8G
-    sync_script:
-      - env
-      - bash sync_rom.sh
+      image: apon77/aosp:cirrus
+      cpu: 4
+      memory: 16G
+    test_script:
+      - bash build_test.sh
