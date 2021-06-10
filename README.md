@@ -1,4 +1,4 @@
-Cherish custom ROM for Realmeme C2
+Cherish custom ROM for Realmeme C2(ghey)
 ==============================
 
 AospExtended [Custom ROM](https://beebom.com/best-custom-roms-android-phones/) for Redmi Note 4(code name mido)
