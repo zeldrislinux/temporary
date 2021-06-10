@@ -5,7 +5,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 # build rom
 source build/envsetup.sh 
-lunch styx_RMX1941-userdebug 
+lunch styx_RMX1941-userdebug  
 m styx-ota
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
