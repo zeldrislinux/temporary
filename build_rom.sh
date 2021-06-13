@@ -3,6 +3,11 @@ repo init --depth=1 --no-repo-verify -u https://github.com/NusantaraProject-ROM/
 git clone https://github.com/Fraschze97/local_manifest --depth=1 -b R3-NAD11 .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j$(nproc --all) || repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
+#patches
+cd build/make
+curl -LO https://github.com/Maanush2004/android_device_realme_RMX1821/blob/lineage-17.1-rmui/patches/build/make/0001-build-Add-option-to-append-vbmeta-image-to-boot-imag.patch
+patch -p1 < *.patch
+cd ../..
 
 # build rom
 . build/envsetup.sh
