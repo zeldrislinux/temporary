@@ -14,7 +14,6 @@ cd ../..
 lunch nad_RMX1821-userdebug
 export SKIP_API_CHECKS=true
 export SKIP_ABI_CHECKS=true
-
 export TZ=Asia/Jakarta
 mka nad
  
