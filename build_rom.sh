@@ -1,9 +1,11 @@
 # sync rom
 repo init --depth=1 --no-repo-verify -u https://github.com/AOSPA/manifest -b ruby -g default,-device,-mips,-darwin,-notdefault
-git clone https://github.com/yashlearnpython/local_manifest.git --depth 1 -b pa .repo/local_manifests
+git clone https://github.com/yashlearnpython/local_manifest.git -b pa .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
+#source build/envsetup.sh
+#lunch pa_mido-userdebug
 export TZ=Asia/Kolkata
 ./rom-build.sh mido -t userdebug
 
