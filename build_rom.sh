@@ -3,9 +3,9 @@ repo init --depth=1 --no-repo-verify -u https://github.com/NusantaraProject-ROM/
 git clone https://github.com/Fraschze97/local_manifest --depth=1 -b 30A-NAD11 .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j$(nproc --all) || repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
-#patches
-cd build/make
-curl -LO https://github.com/Maanush2004/android_device_realme_RMX1821/blob/lineage-17.1-rmui/patches/build/make/0001-build-Add-option-to-append-vbmeta-image-to-boot-imag.patch
+# patch
+cd external/selinux 
+curl -LO https://raw.githubusercontent.com/SamarV-121/android_vendor_extra/lineage-18.1/patches/external/selinux/0001-Revert-libsepol-Make-an-unknown-permission-an-error-.patch
 patch -p1 < *.patch
 cd ../..
 
