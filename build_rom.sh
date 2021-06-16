@@ -3,11 +3,6 @@ repo init --depth=1 --no-repo-verify -u https://github.com/Project-LegionOS/mani
 git clone https://github.com/P-Salik/local_manifest --depth 1 -b LegionOS .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8 || repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
-cd frameworks/opt/net/ims
-curl -LO https://github.com/PixelExperience/frameworks_opt_net_ims/commit/661ae9749b5ea7959aa913f2264dc5e170c63a0a.patch
-patch -p1 < *.patch
-cd ../../../..
-
 # build rom
 . build/envsetup.sh
 lunch legion_RMX1941-userdebug
