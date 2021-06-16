@@ -5,7 +5,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 # build rom
 source build/envsetup.sh
-lunch cherish_RMX1801-userdebug
+lunch cherish_RMX1801-user
 export TZ=Asia/Kolkata 
 mka bacon -j$(nproc --all)
 
