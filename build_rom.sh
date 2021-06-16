@@ -7,7 +7,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 source build/envsetup.sh
 lunch cherish_RMX1801-userdebug
 export TZ=Asia/Kolkata 
-mka bacon -j$(nproc --all)
+mka bacon
 
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
