@@ -8,8 +8,6 @@ source build/envsetup.sh
 lunch cherish_RMX1801-userdebug
 export TZ=Asia/Kolkata 
 mka bacon -j$(nproc --all)
-date +%s
-bash OTA/support/ota.sh RMX1801 ~/roms/CherishOS "Shazu_xD" https://t.me/Shazu_xD https://forum.xda-developers.com/
 
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
