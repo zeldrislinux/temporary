@@ -5,7 +5,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 # build rom
 . build/envsetup.sh
-lunch cherish_lavender-userdebug#
+lunch cherish_lavender-userdebug
 export TZ=Asia/Ho_Chi_Minh 
 mka bacon -j$(nproc --all)
 
