@@ -1,12 +1,11 @@
 # sync rom
-repo init --depth=1 --no-repo-verify -u git://github.com/DotOS/manifest.git -b dot11 -g default,-device,-mips,-darwin,-notdefault
-git clone https://github.com/MiDoNaSR545/mainfest_personal.git --depth 1 -b dot .repo/local_manifests
+repo init --depth=1 --no-repo-verify -u https://github.com/ShapeShiftOS/android_manifest.git -b android_11 -g default,-device,-mips,-darwin,-notdefault
+git clone https://github.com/MiDoNaSR545/mainfest_personal.git --depth 1 -b ssos .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
 source build/envsetup.sh
-lunch dot_ysl-user
-export WITH_GAPPS=false
+lunch ssos_ysl-user
 make bacon
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
