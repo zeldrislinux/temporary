@@ -15,7 +15,6 @@ cd out/target/product/blueline/
 zip -r images.zip *img 
 curl -sL https://git.io/file-transfer | sh
 ./transfer wet images.zip 
-rm -rf images.zip 
 cd ../../../../
 
 USER=
