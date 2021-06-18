@@ -5,7 +5,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 # build rom
 source build/envsetup.sh
-source device/google/crosshatch/vendorsetup.sh
+bash device/google/crosshatch/vendorsetup.sh
 lunch fluid_blueline-user
 export TZ=Asia/Dhaka #put before last build command
 
