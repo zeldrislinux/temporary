@@ -5,7 +5,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 # build rom
 . build/envsetup.sh
-lunch corvus_ysl-user
+lunch corvus_ysl-userdebug
 export RAVEN_LAIR=Beta
 export SELINUX_IGNORE_NEVERALLOWS=true
 make corvus
