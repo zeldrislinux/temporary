@@ -1,11 +1,11 @@
 # sync rom
-repo init --depth=1 --no-repo-verify -u git://github.com/DotOS/manifest.git -b dot11 -g default,-device,-mips,-darwin,-notdefault # Initilizeing dotOS11 sources
-git clone https://github.com/RahulPalXDA/local_manifest.git --depth 1 -b dot11_G .repo/local_manifests # adding builder's local_manifest to Initilized sources
+repo init --depth=1 --no-repo-verify -u https://github.com/SpiceOS/android.git -b 11 -g default,-device,-mips,-darwin,-notdefault # Initilizeing dotOS11 sources
+git clone https://github.com/RahulPalXDA/local_manifest.git --depth 1 -b lineage_G .repo/local_manifests # adding builder's local_manifest to Initilized sources
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8 || repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8 # Syncing previously Initilized sources
 
 # build rom
 source build/envsetup.sh
-lunch dot_G-userdebug
+lunch lineage_G-userdebug
 export TZ=Asia/Kolkata #put before last build command (setting timezone)
 make bacon
 
