@@ -5,6 +5,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 # build rom
 source build/envsetup.sh
+cd vendor/codeaurora/telephony/ && git fetch https://github.com/CartelProject/vendor_codeaurora_telephony/ && git cherry-pick 5182419988e51734d88d7428b9a22a5660c185af && cd .. && cd .. && cd ..
 lunch p404_X00QD-userdebug
 make bacon
 
