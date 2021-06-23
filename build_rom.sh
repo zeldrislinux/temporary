@@ -8,7 +8,7 @@ git cherry-pick 5182419988e51734d88d7428b9a22a5660c185af
 cd ..
 cd ..
 cd ..
- 
+
 # build rom
 source build/envsetup.sh
 lunch p404_X00QD-userdebug
