@@ -2,12 +2,6 @@
 repo init --depth=1 --no-repo-verify -u https://github.com/P-404/platform_manifest -b rippa -g default,-device,-mips,-darwin,-notdefault
 git clone https://github.com/MLZ94/local_manifest -b p404 .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8 || repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
-cd vendor/codeaurora/commonsys/telephony
-git fetch https://github.com/CartelProject/vendor_codeaurora_telephony/
-git cherry-pick 5182419988e51734d88d7428b9a22a5660c185af
-cd ..
-cd ..
-cd ..
 
 # build rom
 source build/envsetup.sh
