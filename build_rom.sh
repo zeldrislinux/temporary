@@ -5,7 +5,7 @@ git clone https://github.com/cArN4gEisDeD/local_manifest --depth=1 -b dot .repo/
 
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j$(nproc --all) || repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
-# build
+# build   
 source build/envsetup.sh
 lunch dot_RMX1941-userdebug
 make bacon
