@@ -5,7 +5,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 #build makr
 #. build/envsetup.sh
-#lunch pa_ysl-userdebug
+#lunch pa_pine-userdebug
 export TZ=Asia/kolkata #put before last build commandm..
 ./rom-build.sh pine
 # upload rom (if You don't need to upload multiple files, then you don't need to edit next line)........
