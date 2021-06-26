@@ -3,7 +3,7 @@ repo init --depth=1 -u git://github.com/lighthouse-os/manifest.git -b raft -g de
 git clone https://github.com/galanteria01/local_manifest.git --depth 1 -b main .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
-# build rom
+# build rom again
 source build/envsetup.sh
 lunch lighthouse_violet-user
 export TZ=Asia/Kolkata #put before last build command
