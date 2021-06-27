@@ -1,3 +1,4 @@
+
 # sync rom
 repo init --depth=1 --no-repo-verify -u git://github.com/Project-Xtended/manifest.git -b xr -g default,-device,-mips,-darwin,-notdefault
 git clone https://github.com/neonmicky/local_manifest.git --depth 1 -b xr .repo/local_manifests
