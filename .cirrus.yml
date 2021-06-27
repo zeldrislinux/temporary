@@ -62,7 +62,7 @@ task:
     - mkdir -p ~/roms/$rom_name
     - cd ~/roms/$rom_name
 
-    - ls same_rom_running && exit 1 || true
+    - ls same_rom_running && exit 0 || false
     - touch same_rom_running
 
     - rm -rf .repo/local_manifests
