@@ -5,7 +5,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 # build rom
 source build/envsetup.sh
-lunch corvus_RMX1801-eng
+lunch corvus_RMX1801-userdebug
 export TZ=Asia/Kolkata 
 export SELINUX_IGNORE_NEVERALLOWS=true
 make corvus
