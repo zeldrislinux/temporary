@@ -9,7 +9,6 @@ lunch komodo_onclite-userdebug
 export TZ=Asia/Jakarta #put before last build command
 export KOMODO_OFFICIAL=true
 export KOMODO_BUILD_TYPE=OFFICIAL
-export KOMODO_GAPPS_TYPE=gapps
 masak komodo -j$(nproc --all)
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
