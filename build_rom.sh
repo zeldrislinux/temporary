@@ -1,11 +1,11 @@
 # sync rom
-repo init --depth=1 --no-repo-verify -u git://github.com/NezukoOS/manifest -b eleven -g default,-device,-mips,-darwin,-notdefault
-git clone https://github.com/nhAsif/local_manifest.git --depth 1 -b main .repo/local_manifests
+repo init --depth=1 --no-repo-verify -u git://github.com/ResurrectionRemix/platform_manifest.git -b Q -g default,-device,-mips,-darwin,-notdefault
+git clone https://github.com/nhAsif/local_manifest.git --depth 1 -b rr .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
 source build/envsetup.sh
-lunch nezuko_rosy-userdebug
+lunch rr_rosy-userdebug
 export TZ=Asia/Dhaka #put before last build command
 mka bacon
 
