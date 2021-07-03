@@ -5,7 +5,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 # build rom
 source build/envsetup.sh
-lunch derp_vayu-user
+lunch aosp_ginkgo-userdebug
 export TZ=Asia/Jakarta
 m aex -j$(nproc --all)
 
