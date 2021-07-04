@@ -2,7 +2,6 @@
 repo init --depth=1 --no-repo-verify -u git://github.com/DerpFest-11/manifest.git -b 11 -g default,-device,-mips,-darwin,-notdefault
 git clone https://github.com/DhruvChhura/manifest_personal.git --depth 1 -b master .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
-sed -i "103s/\"alpha\",\ 0,\ 0,\ 1)/\"alpha\",\ 0,\ 0,\ 1);/g" frameworks/base/packages/SystemUI/src/com/android/systemui/qs/OPQSFooter.java
 # build rom
 
 source build/envsetup.sh
