@@ -7,8 +7,8 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 # build rom
 source build/envsetup.sh
-lunch wave_vayu-eng
-export TZ=Asia/Dhaka #put before last build command.
+lunch wave_vayu-userdebug
+export TZ=Asia/Dhaka #put before last build command
 mka bacon
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
