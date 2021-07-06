@@ -6,6 +6,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 source build/envsetup.sh
 lunch fluid_umi-eng
 export WITH_GAPPS=true
+export SELINUX_IGNORE_NEVERALLOWS=true
 export TZ=Asia/Hong_Kong
 mka bacon
 
