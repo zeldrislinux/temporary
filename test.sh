@@ -15,10 +15,10 @@ then
 	exit 1
 fi
 
-rm_check=$(grep 'rm -rf' $CIRRUS_WORKING_DIR/build_rom.sh | wc -l)
+rm_check=$(grep 'rm ' $CIRRUS_WORKING_DIR/build_rom.sh | wc -l)
 if [[ $rm_check -gt 0 ]]
 then
-	echo Please dont use rm -rf inside script, use local manifest for this purpose.
+	echo Please dont use rm inside script, use local manifest for this purpose.
 	exit 1
 fi
 
@@ -77,6 +77,20 @@ sync_string="repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune 
 if [[ $sync_check != *$sync_string* ]]
 then
 	echo Please follow repo sync line of main branch.
+	exit 1
+fi
+
+fetch_check=$(grep 'git fetch ' $CIRRUS_WORKING_DIR/build_rom.sh | wc -l)
+if [[ $fetch_check -gt 0 ]]
+then
+	echo Please dont use fetch inside script, use local manifest for this purpose.
+	exit 1
+fi
+
+cd_check=$(grep "cd *" $CIRRUS_WORKING_DIR/build_rom.sh | wc -l)
+if [[ $cd_check -gt 0 ]]
+then
+	echo Please dont use cd inside script, use local manifest for this purpose.
 	exit 1
 fi
 
