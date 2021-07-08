@@ -1,7 +1,7 @@
 # sync rom
 repo init --depth=1 --no-repo-verify -u git://github.com/lighthouse-os/manifest.git -b raft -g default,-device,-mips,-darwin,-notdefault
 git clone https://github.com/Dreadwyrm/local_manifests --depth 1 -b ginkgo-Lighthouse .repo/local_manifests
-repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
+repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8 || repo sync -c -q --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j$(nproc --all)
 
 # build rom
 . build/envsetup.sh
