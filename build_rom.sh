@@ -7,6 +7,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 . build/envsetup.sh
 lunch lighthouse_ginkgo-userdebug
 export TZ=Asia/Jakarta
+export WITH_GAPPS=true
 export SELINUX_IGNORE_NEVERALLOWS=true
 mka lighthouse
 
