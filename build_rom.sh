@@ -5,9 +5,8 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 # build rom
 source build/envsetup.sh
-lunch havoc_vayu-userdebug
+lunch havoc_vayu-user
 export TZ=Asia/Dhaka #put before last build command
-export SELINUX_IGNORE_NEVERALLOWS := true
 mka bacon
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
