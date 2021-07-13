@@ -12,7 +12,7 @@ task:
   persistent_worker:
     isolation:
       container:
-        image: apon77/aosp:cirrus
+        image: archlinux:latest
         cpu: 2
         memory: 4G
 
@@ -126,7 +126,7 @@ task:
   persistent_worker:
     isolation:
       container:
-        image: apon77/aosp:cirrus
+        image: archlinux:latest
         cpu: 2
         memory: 4G
 
