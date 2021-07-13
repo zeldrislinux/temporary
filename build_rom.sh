@@ -9,6 +9,7 @@ lunch lineage_mojito-userdebug
 export SKIP_API_CHECKS=true
 export SKIP_ABI_CHECKS=true
 export ALLOW_MISSING_DEPENDENCIES=true
+export SELINUX_IGNORE_NEVERALLOWS=true
 export TZ=Asia/Jakarta
 mka bacon
 
