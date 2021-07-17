@@ -1,18 +1,31 @@
-AospExtended custom ROM for Redmi Note 4
+PixelOS Custom Rom for Redmi Note 8/8T
 ==============================
 
-AospExtended [Custom ROM](https://beebom.com/best-custom-roms-android-phones/) for Redmi Note 4(code name mido)
+PixelOS is an AOSP based ROM, with Google apps included and all Pixel goodies (launcher, wallpapers, icons, fonts, bootanimation)
+This is a fork of Pixel Experience with a few tweaks, while PixelishExperience comes with a lot of customisations on the top of PixelOS to provide a good experience for a wide range of users.​
 
-[Features as video](https://www.youtube.com/watch?v=KuQ9jIVmOXY) or [Features as text](https://forum.xda-developers.com/t/rom-11-0-aospextended-rom-v8-0-unofficial-surya.4202905/)
+[Features as text](https://forum.xda-developers.com/t/rom-11-official-pixelos-pixelishexperience-aosp-unified-6-7-2021.4237791/page-2#post-84903831)
 
-[Screenshots](https://t.me/Apon77Mido/5270) or [Video](https://www.youtube.com/watch?v=KuQ9jIVmOXY)
+[Screenshots](https://t.me/whyredfiredev/111)
 
-Distributed [here](https://t.me/rn4downloads/4885)
+Distributed [here](https://forum.xda-developers.com/t/rom-11-official-pixelos-pixelishexperience-aosp-unified-6-7-2021.4237791/)
 
-Estimated installation no.: 150-500
-
-How to use this repository
+Flashing Instructions
 -------------------
 
-* [Instructions if you want to develop AospExtended custom ROM as a developer](https://github.com/Apon77/mido-AospExtended-Apon77/blob/main/Instructions%20for%20developers.md)
-* [Instructions if you want to use AospExtended custom ROM in your device as a user](https://github.com/Apon77/mido-AospExtended-Apon77/blob/main/Instructions%20for%20users.md)
+Clean flash:
+- Wipe Dalvik, Cache, Vendor, System, Data
+- Flash ROM
+- Flash magisk (optional)
+- Flash latest R firmware
+- Format Data (if encrypted)
+- Reboot
+
+Updating to a newer build (dirty flash):
+- Either update via OTA or, download the rom manually
+- Reboot to recovery
+- Wipe system, vendor, cache, dalvik
+- Flash ROM zip and magisk (optional)
+- Reboot and voila!
+
+[Support Group](https://t.me/whyredfirehub)
