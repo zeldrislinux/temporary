@@ -3,7 +3,7 @@ repo init --depth=1 --no-repo-verify -u git://github.com/Los-FE/manifest.git -b 
 git clone https://github.com/cArN4gEisDeD/local_manifest.git --depth 1 -b losfe .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
-# build rom
+# build rom.    
 source build/envsetup.sh
 lunch lineage_RMX1941-userdebug
 export TZ=Asia/Kolkata #put before last build command
