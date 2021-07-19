@@ -15,10 +15,17 @@ then
 	exit 1
 fi
 
-rm_check=$(grep 'rm -rf' $CIRRUS_WORKING_DIR/build_rom.sh | wc -l)
+rm_check=$(grep 'rm ' $CIRRUS_WORKING_DIR/build_rom.sh | wc -l)
 if [[ $rm_check -gt 0 ]]
 then
-	echo Please dont use rm -rf inside script, use local manifest for this purpose.
+	echo Please dont use rm inside script, use local manifest for this purpose.
+	exit 1
+fi
+
+mv_check=$(grep 'mv ' $CIRRUS_WORKING_DIR/build_rom.sh | wc -l)
+if [[ $mv_check -gt 0 ]]
+then
+	echo Please dont use mv inside script, use local manifest for this purpose.
 	exit 1
 fi
 
@@ -36,6 +43,27 @@ then
 	exit 1
 fi
 
+installclean_check=$(grep ' installclean' $CIRRUS_WORKING_DIR/build_rom.sh | wc -l)
+if [[ $installclean_check -gt 0 ]]
+then
+	echo Please dont use make installclean. Server does make installclean by default, which is enough for most of the cases. 
+	exit 1
+fi
+
+patch_check=$(grep 'patch ' $CIRRUS_WORKING_DIR/build_rom.sh | wc -l)
+if [[ $patch_check -gt 0 ]]
+then
+	echo Please dont use patch inside script, use local manifest for this purpose.
+	exit 1
+fi
+
+and_check=$(grep ' && ' $CIRRUS_WORKING_DIR/build_rom.sh | wc -l)
+if [[ $and_check -gt 0 ]]
+then
+	echo 'Please dont use && inside script, put that command in next line for this purpose.'
+	exit 1
+fi
+
 rclone_check=$(grep 'rclone copy' $CIRRUS_WORKING_DIR/build_rom.sh)
 rclone_string="rclone copy out/target/product/\$(grep unch \$CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d ' ' -f 2 | cut -d _ -f 2 | cut -d - -f 1)/*.zip cirrus:\$(grep unch \$CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d ' ' -f 2 | cut -d _ -f 2 | cut -d - -f 1) -P"
 if [[ $rclone_check != *$rclone_string* ]]
@@ -49,6 +77,20 @@ sync_string="repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune 
 if [[ $sync_check != *$sync_string* ]]
 then
 	echo Please follow repo sync line of main branch.
+	exit 1
+fi
+
+fetch_check=$(grep 'git fetch ' $CIRRUS_WORKING_DIR/build_rom.sh | wc -l)
+if [[ $fetch_check -gt 0 ]]
+then
+	echo Please dont use fetch inside script, use local manifest for this purpose.
+	exit 1
+fi
+
+cd_check=$(grep "cd *" $CIRRUS_WORKING_DIR/build_rom.sh | wc -l)
+if [[ $cd_check -gt 0 ]]
+then
+	echo Please dont use cd inside script, use local manifest for this purpose.
 	exit 1
 fi
 
