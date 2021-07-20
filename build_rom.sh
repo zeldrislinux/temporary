@@ -1,6 +1,6 @@
 # sync rom
 repo init --depth=1 --no-repo-verify -u https://github.com/StyxProject/manifest -b R -g default,-device,-mips,-darwin,-notdefault
-git clone https://github.com/P-Salik/local_manifest-1 -b Styx --depth=1 .repo/local_manifests
+git clone https://github.com/sarthakroy2002/local_manifest-1 -b Styx --depth=1 .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
