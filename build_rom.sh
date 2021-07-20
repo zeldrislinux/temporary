@@ -1,6 +1,6 @@
 # sync rom
 repo init --depth=1 --no-repo-verify -u https://github.com/PixelBlaster-OS/manifest -b eleven -g default,-device,-mips,-darwin,-notdefault
-git clone https://github.com/Dreadwyrm/local_manifests --depth 1 -b ginkgo-PB .repo/local_manifests
+git clone https://github.com/Dreadwyrm/local_manifests --depth 1 -b PB .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
