@@ -4,9 +4,7 @@ git clone https://github.com/JamieHoSzeYui/manifest --depth 1 -b styx .repo/loca
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j16
 
 # apply required commits
-wget https://raw.githubusercontent.com/ROM-builders/temporary/cheeseburger-StyxProject-JamieHoSzeYui/fwb
-chmod +x fwb 
-./fwb 
+bash .repo/local_manifests/fwb frameworks/base/
 
 # build rom
 source build/envsetup.sh
