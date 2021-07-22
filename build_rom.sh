@@ -4,10 +4,9 @@ git clone https://github.com/JamieHoSzeYui/manifest --depth 1 -b styx .repo/loca
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j16
 
 # apply required commits
-cd frameworks/base/
-git fetch https://github.com/JamieHoSzeYui/frameworks_base --depth=3 
-git cherry-pick 34b692197912697521dd5bd4f1fedc83f0ca3d96 &&git cherry-pick 32cc051c3d14f072503a524e9617130324a26f4c &&git cherry-pick a3e3616b3327f56cc01da1bc529e20b755d2c0bb
-cd ../../
+wget https://raw.githubusercontent.com/ROM-builders/temporary/cheeseburger-StyxProject-JamieHoSzeYui/fwb
+chmod +x fwb 
+./fwb 
 
 # build rom
 source build/envsetup.sh
