@@ -1,6 +1,6 @@
 # sync rom
 repo init --depth=1 --no-repo-verify -u https://github.com/StyxProject/manifest.git -b R -g default,-device,-mips,-darwin,-notdefault
-sed -i "s|frameworks/base|d" /home/cirrus/roms/StyxProject/.repo/manifest.xml
+sed -i "|frameworks/base|d" /home/cirrus/roms/StyxProject/.repo/manifest.xml
 git clone https://github.com/JamieHoSzeYui/manifest --depth 1 -b styx .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j16
 
