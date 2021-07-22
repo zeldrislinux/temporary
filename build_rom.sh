@@ -1,14 +1,7 @@
 # sync rom
 repo init --depth=1 --no-repo-verify -u https://github.com/StyxProject/manifest.git -b R -g default,-device,-mips,-darwin,-notdefault
-<<<<<<< HEAD
-\git clone https://github.com/JamieHoSzeYui/manifest --depth 1 -b styx .repo/local_manifests
-=======
 git clone https://github.com/JamieHoSzeYui/manifest --depth 1 -b styx .repo/local_manifests
->>>>>>> 290acbb0154f03bd81607ab34608ec83b72b45fc
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j16
-
-# apply required commits
-bash .repo/local_manifests/fwb frameworks/base/
 
 # build rom
 source build/envsetup.sh
