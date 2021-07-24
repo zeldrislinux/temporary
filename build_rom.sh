@@ -8,6 +8,7 @@ source build/envsetup.sh
 lunch statix_cheeseburger-userdebug
 export TZ=Asia/Dhaka #put before last build command
 export BUILD_BROKEN_OUTSIDE_INCLUDE_DIRS=true
+export BUILD_BROKEN_USES_BUILD_COPY_HEADERS=true
 m bacon
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
