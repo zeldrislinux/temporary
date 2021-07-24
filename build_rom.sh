@@ -7,7 +7,6 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 source build/envsetup.sh
 lunch awaken_cheeseburger-userdebug
 export BUILD_BROKEN_OUTSIDE_INCLUDE_DIRS=true
-
 export TZ=Asia/Dhaka #put before last build command
 m bacon
 
