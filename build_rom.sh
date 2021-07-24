@@ -1,3 +1,4 @@
+
 # sync rom
 repo init --depth=1 --no-repo-verify -u https://github.com/StyxProject/manifest -b R -g default,-device,-mips,-darwin,-notdefault
 git clone https://github.com/arulebin/local_manifest.git --depth 1 -b styx .repo/local_manifests
