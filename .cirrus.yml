@@ -9,10 +9,15 @@ task:
   skip: $CIRRUS_BRANCH == 'main'
   only_if: $CIRRUS_REPO_OWNER == 'ROM-builders'
   timeout_in: 30m
-  container:
-    image: apon77/aosp:cirrus
-    cpu: .7
-    memory: 2G
+  persistent_worker:
+    labels:
+      name: AX61-2
+    isolation:
+      container:
+        image: apon77/aosp:cirrus
+        cpu: 2
+        memory: 4G
+
   env_script:
     - env
   show_script:
@@ -20,6 +25,7 @@ task:
   notify_script:
     - rom_name=$(grep init $CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d / -f 4)
     - device=$(grep unch $CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d ' ' -f 2 | cut -d _ -f 2 | cut -d - -f 1)
+    - grep _jasmine_sprout $CIRRUS_WORKING_DIR/build_rom.sh > /dev/null && device=jasmine_sprout
     - your_telegram_id=@ROM_builders_junk
     - show=$(cat $CIRRUS_WORKING_DIR/build_rom.sh)
     - curl -s "https://api.telegram.org/bot${bot_api}/sendmessage" -d "text=<code>$device-$rom_name</code> Started
@@ -39,6 +45,8 @@ task:
     - Test
   timeout_in: 4h
   persistent_worker:
+    labels:
+      name: AX61-1
     isolation:
       container:
         image: apon77/aosp:cirrus
@@ -56,14 +64,8 @@ task:
 
     - rom_name=$(grep init $CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d / -f 4)
 
-#    - same_rom=$(ps aux|grep /home/cirrus/roms/$rom_name|wc -l)
-#    - if [[ $same_rom -gt 1 ]]; then echo Please wait until same rom other running build is finished; exit 1; fi
-
     - mkdir -p ~/roms/$rom_name
     - cd ~/roms/$rom_name
-
-    - ls same_rom_running && exit 1 || true
-    - touch same_rom_running
 
     - rm -rf .repo/local_manifests
     - command=$(head $CIRRUS_WORKING_DIR/build_rom.sh -n $(expr $(grep 'build/envsetup.sh' $CIRRUS_WORKING_DIR/build_rom.sh -n | cut -f1 -d:) - 1))
@@ -75,6 +77,7 @@ task:
 
     - rom_name=$(grep init $CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d / -f 4)
     - device=$(grep unch $CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d ' ' -f 2 | cut -d _ -f 2 | cut -d - -f 1)
+    - grep _jasmine_sprout $CIRRUS_WORKING_DIR/build_rom.sh > /dev/null && device=jasmine_sprout
 
     - cd ~/roms/$rom_name
     - export CCACHE_DIR=~/ccache/$rom_name/$device
@@ -86,16 +89,11 @@ task:
     - command=$(tail $CIRRUS_WORKING_DIR/build_rom.sh -n +$(expr $(grep 'build/envsetup.sh' $CIRRUS_WORKING_DIR/build_rom.sh -n | cut -f1 -d:) - 1)| head -n -1 | grep -v 'rclone copy')
     - bash -c "$command"
 
-  always:
-    same_rom_script:
-      - rom_name=$(grep init $CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d / -f 4)
-      - cd ~/roms/$rom_name
-      - rm same_rom_running
-
   ccache_stats_script:
     - set -exv
     - rom_name=$(grep init $CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d / -f 4)
     - device=$(grep unch $CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d ' ' -f 2 | cut -d _ -f 2 | cut -d - -f 1)
+    - grep _jasmine_sprout $CIRRUS_WORKING_DIR/build_rom.sh > /dev/null && device=jasmine_sprout
 
     - export CCACHE_DIR=~/ccache/$rom_name/$device
     - ccache -s
@@ -104,16 +102,18 @@ task:
     - set -exv
     - rom_name=$(grep init $CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d / -f 4)
     - device=$(grep unch $CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d ' ' -f 2 | cut -d _ -f 2 | cut -d - -f 1)
+    - grep _jasmine_sprout $CIRRUS_WORKING_DIR/build_rom.sh > /dev/null && device=jasmine_sprout
 
     - cd ~/roms/$rom_name
     - engzip=$(ls out/target/product/$device/*-eng*.zip || true)
-    - otazip=$(ls out/target/product/$device/*-ota-*.zip | grep -v "hentai" || true)
+    - otazip=$(ls out/target/product/$device/*-ota-*.zip | grep -v "hentai" | grep -v "evolution" || true)
     - awaken=$(ls out/target/product/$device/Project-Awaken*.zip || true)
     - octavi=$(ls out/target/product/$device/OctaviOS-R*.zip || true)
     - p404=$(ls out/target/product/$device/?.*zip || true)
     - rm -rf $engzip $otazip $awaken $octavi $p404
     - dlink=$(basename out/target/product/$device/*.zip)
     - command=$(grep 'rclone copy' $CIRRUS_WORKING_DIR/build_rom.sh)
+    - if [[ $device == jasmine_sprout ]]; then command="rclone copy out/target/product/jasmine_sprout/*zip cirrus:jasmine_sprout -P"; fi
     - bash -c "$command"
     - echo "Download link https://roms.cirrus-ci.workers.dev/0:/$device/$dlink"
 
@@ -121,6 +121,7 @@ task:
     - set -exv
     - rom_name=$(grep init $CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d / -f 4)
     - device=$(grep unch $CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d ' ' -f 2 | cut -d _ -f 2 | cut -d - -f 1)
+    - grep _jasmine_sprout $CIRRUS_WORKING_DIR/build_rom.sh > /dev/null && device=jasmine_sprout
     - cd ~/roms/$rom_name
     - rm -rf out/target/product/$device
 
@@ -132,14 +133,20 @@ task:
   depends_on:
     - Build
   timeout_in: 30m
-  container:
-    image: apon77/aosp:cirrus
-    cpu: .7
-    memory: 2G
+  persistent_worker:
+    labels:
+      name: AX61-2
+    isolation:
+      container:
+        image: apon77/aosp:cirrus
+        cpu: 2
+        memory: 4G
+
   post_build_script:
     - set -e
     - rom_name=$(grep init $CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d / -f 4)
     - device=$(grep unch $CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d ' ' -f 2 | cut -d _ -f 2 | cut -d - -f 1)
+    - grep _jasmine_sprout $CIRRUS_WORKING_DIR/build_rom.sh > /dev/null && device=jasmine_sprout
     - your_telegram_id=@ROM_builders_channel
     - curl -s "https://api.telegram.org/bot${bot_api}/sendmessage" -d "text=<code>$device-$rom_name</code> Succeed
       
