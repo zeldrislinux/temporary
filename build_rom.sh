@@ -1,6 +1,6 @@
 # sync rom
 repo init --depth=1 --no-repo-verify -u git://github.com/DotOS/manifest.git -b dot11 -g default,-device,-mips,-darwin,-notdefault
-git clone https://github.com/NganuCoeg/local_manifests --depth 1 -b RMX3171 .repo/local_manifests
+git clone https://github.com/NganuCoeg/local_manifests --depth 1 -b RMX3171-dotOS .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
