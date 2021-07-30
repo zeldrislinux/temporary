@@ -7,8 +7,6 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 source build/envsetup.sh
 lunch lineage_RMX1941-userdebug
 export TZ=Asia/Jakarta #put before last build command
-export SKIP_ABI_CHECKS=true
-export SKIP_API_CHECKS=true
 export ALLOW_MISSING_DEPENDENCIES=true
 mka bacon -j$(nproc --all) 
 
