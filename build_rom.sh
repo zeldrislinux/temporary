@@ -9,7 +9,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 source build/envsetup.sh
 lunch aosp_vayu-user
 export TZ=Asia/Dhaka #put before last build command
-ALLOW_MISSING_DEPENDENCIES=true
+export ALLOW_MISSING_DEPENDENCIES=true
 m aex
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
