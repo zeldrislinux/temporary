@@ -5,6 +5,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 # build rom
 source build/envsetup.sh
+development/vndk/tools/header-checker/utils/create_reference_dumps.py --llndk -l libz
 lunch lighthouse_rs988-user
 export TZ=Asia/Dhaka #put before last build command
 mka lighthouse
