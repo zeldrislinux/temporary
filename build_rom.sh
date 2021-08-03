@@ -5,7 +5,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 # build rom
 source build/envsetup.sh
-export TARGET_GAPPS_ARCH=arm64
+export EXTHM_GAPPS
 lunch exthm_olivewood-userdebug
 export TZ=Asia/Dhaka #put before last build command
 mka bacon
