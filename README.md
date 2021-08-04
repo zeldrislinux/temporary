@@ -1,15 +1,13 @@
-AospExtended custom ROM for Redmi Note 4
+CherishOS custom ROM for Mi MIX 2 (chiron)
 ==============================
 
-AospExtended [Custom ROM](https://beebom.com/best-custom-roms-android-phones/) for Redmi Note 4(code name mido)
+CherishOS [Custom ROM](https://beebom.com/best-custom-roms-android-phones/) for Redmi Note 4(code name mido)
 
-[Features as video](https://www.youtube.com/watch?v=KuQ9jIVmOXY) or [Features as text](https://forum.xda-developers.com/t/rom-11-0-aospextended-rom-v8-0-unofficial-surya.4202905/)
+[Screenshots](https://imgur.com/a/V3mKvez)
 
-[Screenshots](https://t.me/Apon77Mido/5270) or [Video](https://www.youtube.com/watch?v=KuQ9jIVmOXY)
+Distributed [here](https://forum.xda-developers.com/t/rom-updated-unofficial-11-chiron-cherishos-v2-6-24-06-2021.4252227/)
 
-Distributed [here](https://t.me/rn4downloads/4885)
-
-Estimated installation no.: 150-500
+Estimated installation no.: 150-200
 
 How to use this repository
 -------------------
