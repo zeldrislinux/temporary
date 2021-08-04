@@ -9,3 +9,4 @@ else
 fi
 
 #dim. 01 août 2021 19:07:49 CEST upload trigger script [skip ci]
+#mer. 04 août 2021 19:33:11 CEST test pixel powerhal
