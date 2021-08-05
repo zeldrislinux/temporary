@@ -8,6 +8,7 @@ source build/envsetup.sh
 lunch lighthouse_violet-user
 export TZ=Asia/Kolkata #put before last build command
 export SELINUX_IGNORE_NEVERALLOWS=true
+export SKIP_ABI_CHECK=true
 brunch violet
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line .)
