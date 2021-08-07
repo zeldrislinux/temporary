@@ -1,4 +1,5 @@
 # First Initial Build
+#
 # sync rom
 repo init --depth=1 --no-repo-verify -u https://github.com/Evolution-X/manifest -b elle -g default,-device,-mips,-darwin,-notdefault
 git clone https://github.com/linuxmobile/local_manifest --depth 1 -b evox .repo/local_manifests
