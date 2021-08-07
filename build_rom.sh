@@ -1,4 +1,4 @@
-# First Initial Build
+# First Initial Build | fixed sync
 # sync rom
 repo init --depth=1 --no-repo-verify -u https://github.com/PixelExtended/manifest -b ace -g default,-device,-mips,-darwin,-notdefault
 git clone https://github.com/linuxmobile/local_manifest --depth 1 -b pixelx .repo/local_manifests
