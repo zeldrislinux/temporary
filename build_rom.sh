@@ -7,6 +7,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 source build/envsetup.sh
 lunch lighthouse_on7xelte-userdebug
 export SKIP_ABI_CHECKS=true
+ln -s $(pwd)/prebuilts/clang/host/linux-x86/clang-r383902b/bin/lld $(pwd)/prebuilts/clang/host/linux-x86/clang-r383902b/bin/ld &> /dev/null
 export TZ=Asia/Dhaka #put before last build command
 mka lighthouse
 
