@@ -1,4 +1,5 @@
 # Change to unofficial build.
+# Update to 5.1.3 https://twitter.com/dotosofficial/status/1424450801250885634
 # sync rom
 repo init --depth=1 --no-repo-verify -u git://github.com/DotOS/manifest.git -b dot11 -g default,-device,-mips,-darwin,-notdefault
 git clone https://github.com/linuxmobile/local_manifest --depth 1 -b dotos .repo/local_manifests
