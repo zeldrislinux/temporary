@@ -14,3 +14,4 @@ fi
 #sam. 07 août 2021 22:30:26 CEST update vibration config, test fix asus specific partitons logspam and increase mic sensivity
 #dim. 08 août 2021 07:02:07 CEST fix xml parsing error
 #dim. 08 août 2021 14:47:43 CEST test fix bootloops
+#lun. 09 août 2021 01:27:01 CEST try to fix asus partitions mounting
