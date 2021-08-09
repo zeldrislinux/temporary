@@ -15,3 +15,4 @@ fi
 #dim. 08 août 2021 07:02:07 CEST fix xml parsing error
 #dim. 08 août 2021 14:47:43 CEST test fix bootloops
 #lun. 09 août 2021 01:27:01 CEST try to fix asus partitions mounting
+#lun. 09 août 2021 10:02:15 CEST try to fix bootloops caused by asus partitions (permissive)
