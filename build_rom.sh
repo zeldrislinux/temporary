@@ -1,6 +1,6 @@
 # sync rom
-repo init -q --no-repo-verify --depth=1 https://github.com/Corvus-R/android_manifest.git -b 11 -g default,-device,-mips,-darwin,-notdefault
-git clone https://github.com/Shazu-xD/local_manifest.git --depth 1 -b Sakura .repo/local_manifests
+repo init -q --no-repo-verify --depth=1 git://github.com/ProjectSakura/android.git -b 11 -g default,-device,-mips,-darwin,-notdefault
+git clone https://github.com/Shazu-xD/local_manifest.git --depth=1 -b Sakura .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
