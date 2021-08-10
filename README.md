@@ -1,5 +1,4 @@
 AospExtended custom ROM for Redmi Note 4
-
 ==============================
 
 
