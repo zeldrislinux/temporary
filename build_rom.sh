@@ -1,13 +1,12 @@
 # sync rom
 repo init --depth=1 --no-repo-verify -u git://github.com/SuperiorOS/manifest.git -b eleven -g default,-device,-mips,-darwin,-notdefault
-git clone https://github.com/ayashaa-dumps/local-manifests.git --depth=1 -b master .repo/local_manifests
+git clone https://github.com/ayashaa-dumps/local-manifests.git --depth 1 -b master .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
 source build/envsetup.sh
-source device/xiaomi/ginkgo/remove-anu.sh
 lunch superior_ginkgo-userdebug
-export TZ=Asia/Dhaka #put before last build command
+export TZ=Asia/Jakarta #put before last build command
 mka bacon -j8
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
