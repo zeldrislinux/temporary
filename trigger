@@ -16,3 +16,4 @@ fi
 #dim. 08 août 2021 14:47:43 CEST test fix bootloops
 #lun. 09 août 2021 01:27:01 CEST try to fix asus partitions mounting
 #lun. 09 août 2021 10:02:15 CEST try to fix bootloops caused by asus partitions (permissive)
+#mar. 10 août 2021 09:56:05 CEST test asus specific partition changes on enforcing
