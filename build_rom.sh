@@ -8,7 +8,7 @@ source build/envsetup.sh
 lunch ssos_X00TD-userdebug
 export SELINUX_IGNORE_NEVERALLOWS=true
 export SKIP_API_CHECKS=true
-export TZ=Asia/Dhaka #put before last 
+export TZ=Asia/Dhaka #put before las 
 make bacon
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
