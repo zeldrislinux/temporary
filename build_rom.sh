@@ -6,7 +6,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 # build rom
 source build/envsetup.sh
 lunch lineage_RMX2020-userdebug
-export TZ=Asia/Dhaka #put before last build command
+export TZ=Asia/Dhaka #put before last  build command
 export TARGET_FACE_UNLOCK_SUPPORTED=true
 export CIPHER_GAPPS=true
 export TARGET_USES_BLUR=true
