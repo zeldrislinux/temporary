@@ -7,7 +7,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 source build/envsetup.sh
 lunch bliss_ginkgo-userdebug
 export SELINUX_IGNORE_NEVERALLOWS=true
-export TZ=Asia/Jakarta #put before last build command
+export TZ=Asia/Jakarta # Put before last build command
 blissify -v ginkgo
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
