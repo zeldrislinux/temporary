@@ -18,3 +18,4 @@ fi
 #lun. 09 août 2021 10:02:15 CEST try to fix bootloops caused by asus partitions (permissive)
 #mar. 10 août 2021 09:56:05 CEST test asus specific partition changes on enforcing
 #mar. 10 août 2021 13:35:25 CEST update kernel, update audio conf
+#jeu. 12 août 2021 18:31:29 CEST test stock audio conf
