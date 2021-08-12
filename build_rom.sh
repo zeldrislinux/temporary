@@ -7,6 +7,8 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 source build/envsetup.sh
 lunch revengeos_ginkgo-userdebug
 export TZ=Asia/Jakarta #put before last build command
+export CROSS_COMPILE="$(pwd)/gcc/bin/aarch64-linux-android-"
+export CROSS_COMPILE_ARM32="$(pwd)/gcc32/bin/arm-linux-androideabi-"
 make bacon
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
