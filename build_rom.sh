@@ -5,12 +5,14 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 # build rom
 source build/envsetup.sh
-lunch lineage_RMX2020-userdebug
+lunch lineage_RMX2020-eng
 export TZ=Asia/Dhaka #put before last  build command
+export CIPHER_MAINTAINER=sarthakroy2002
 export TARGET_FACE_UNLOCK_SUPPORTED=true
-export CIPHER_GAPPS=true
 export TARGET_USES_BLUR=true
 export CIPHER_OFFICIAL=true
+export SKIP_ABI_CHECKS=true
+export SKIP_API_CHECKS=true
 mka bacon -j$(nproc --all) 
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
