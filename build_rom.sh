@@ -5,7 +5,6 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 # build rom
 . build/envsetup.sh
-wget https://raw.githubusercontent.com/LynzhX/Patch/main/boot.patch -p external/selinux
 export TZ=Asia/Jakarta #put before last build command
 brunch RMX2001-userdebug
 
