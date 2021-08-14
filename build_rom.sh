@@ -5,8 +5,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 # build rom
 source build/envsetup.sh
-mkdir hardware/qcom/display/config/ 
-cp -ar hardware/qcom-caf/display/config/*.xml hardware/qcom/display/config/
+export WITH_GAPPS=true
 lunch lighthouse_raphael-user
 mka lighthouse
 
