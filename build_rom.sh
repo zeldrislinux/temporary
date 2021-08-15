@@ -5,7 +5,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 # build rom
 export ALLOW_MISSING_DEPENDENCIES=true
-. build/envsetup.sh
+source build/envsetup.sh
 export TZ=Asia/Jakarta #put before last build command
 brunch RMX2001
 
