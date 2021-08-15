@@ -1,4 +1,3 @@
-# first initial build
 # sync rom
 repo init --depth=1 --no-repo-verify -u https://github.com/WeebProjekt/platform_manifest -b reborn -g default,-device,-mips,-darwin,-notdefault
 git clone https://github.com/linuxmobile/local_manifest --depth 1 -b weeb .repo/local_manifests
