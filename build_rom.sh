@@ -4,10 +4,11 @@ git clone https://github.com/MLZ94/local_manifest -b main .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8 || repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
  
 # build rom
+export TARGET_INCLUDE_GAPPS=false
 source build/envsetup.sh
 lunch radiant_X00QD-user
 mka bacon
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
 rclone copy out/target/product/$(grep unch $CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d ' ' -f 2 | cut -d _ -f 2 | cut -d - -f 1)/*.zip cirrus:$(grep unch $CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d ' ' -f 2 | cut -d _ -f 2 | cut -d - -f 1) -P
-rclone copy out/target/product/X00QD/system/build.prop cirrus:X00QD/radiant_prop
+#rclone copy out/target/product/X00QD/system/build.prop cirrus:X00QD/radiant_prop
