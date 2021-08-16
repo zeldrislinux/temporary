@@ -1,12 +1,12 @@
 # sync rom
-repo init --depth=1 --no-repo-verify -u https://github.com/Havoc-OS/android_manifest.git -b eleven -g default,-device,-mips,-darwin,-notdefault
-git clone https://github.com/pocox3pro/Local-Manifests.git --depth 1 -b havoc .repo/local_manifests
+repo init --depth=1 --no-repo-verify -u https://github.com/ProjectRadiant/manifest -b eleven -g default,-device,-mips,-darwin,-notdefault
+git clone https://github.com/MLZ94/local_manifest --depth 1 -b vayu_radiant .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
 source build/envsetup.sh
-lunch havoc_vayu-user
-export TZ=Asia/Dhaka #put before last build command
+export TARGET_INCLUDE_GAPPS=false
+lunch radiant_vayu-user
 mka bacon
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
