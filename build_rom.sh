@@ -16,4 +16,3 @@ rclone copy out/target/product/liber/system.img cirrus:liber/cr_16-8 -P
 rclone copy out/target/product/liber/product.img cirrus:liber/cr_16-8 -P 
 rclone copy out/target/product/liber/vbmeta.img cirrus:liber/cr_16-8 -P 
 rclone copy out/target/product/liber/vendor.img cirrus:liber/cr_16-8 -P 
- 
