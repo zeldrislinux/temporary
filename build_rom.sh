@@ -4,8 +4,8 @@ git clone https://github.com/MLZ94/local_manifest -b main .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8 || repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
  
 # build rom
-export TARGET_INCLUDE_GAPPS=false
 source build/envsetup.sh
+export TARGET_INCLUDE_GAPPS=false
 lunch radiant_X00QD-user
 mka bacon
 
