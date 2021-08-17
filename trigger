@@ -14,3 +14,4 @@ fi
 #lun. 16 août 2021 22:12:04 CEST try fix kernel build error
 #mar. 17 août 2021 10:20:29 CEST update kernel
 #mar. 17 août 2021 12:19:53 CEST fix clang location
+#mar. 17 août 2021 14:51:32 CEST fix vintf issue
