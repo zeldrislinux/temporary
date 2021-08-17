@@ -20,3 +20,4 @@ fi
 #mer. 18 août 2021 00:30:10 CEST fix tree issue on lunch
 #mer. 18 août 2021 01:01:21 CEST try to fix target product
 #mer. 18 août 2021 01:01:55 CEST try to fix target product
+#mer. 18 août 2021 01:15:12 CEST fix arch variant
