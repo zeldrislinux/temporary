@@ -1,13 +1,13 @@
 #sync rom
-repo init --depth=1 --no-repo-verify -u git://github.com/Project-LegionOS/manifest.git -b 11 -g default,-device,-mips,-darwin,-notdefault
+repo init --depth=1 --no-repo-verify -u git://github.com/Colt-Enigma/platform_manifest -b c11 -g default,-device,-mips,-darwin,-notdefault
 git clone https://github.com/Jamesgosling2004/local-Manifests.git --depth 1 -b main .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
 source build/envsetup.sh
-lunch legion_RMX1831-user
+lunch colt_RMX1831-userdebug
 export TZ=Asia/Dhaka #put before last build command
-make legion
+mka colt -j8
 
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
