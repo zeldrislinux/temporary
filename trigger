@@ -18,3 +18,4 @@ fi
 #mar. 17 août 2021 15:29:52 CEST try to fix vintf issue
 #mar. 17 août 2021 20:10:15 CEST try fix wfd
 #mer. 18 août 2021 00:30:10 CEST fix tree issue on lunch
+#mer. 18 août 2021 01:01:21 CEST try to fix target product
