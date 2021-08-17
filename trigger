@@ -16,3 +16,4 @@ fi
 #mar. 17 août 2021 12:19:53 CEST fix clang location
 #mar. 17 août 2021 14:51:32 CEST fix vintf issue
 #mar. 17 août 2021 15:29:52 CEST try to fix vintf issue
+#mar. 17 août 2021 20:10:15 CEST try fix wfd
