@@ -1,11 +1,11 @@
 # sync rom
-repo init -u https://github.com/ProjectRadiant/manifest -b eleven --depth=1 --no-repo-verify -g default,-device,-mips,-darwin,-notdefault
-git clone https://github.com/geek0609/local_manifests --depth 1 -b ginkgo_radiant .repo/local_manifests
+repo init -u https://github.com/PixelOS-Pixelish/manifest -b eleven --depth=1 --no-repo-verify -g default,-device,-mips,-darwin,-notdefault
+git clone https://github.com/geek0609/local_manifests --depth 1 -b mojito_pixelos .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
 source build/envsetup.sh
-lunch radiant_ginkgo-user
+lunch aosp_mojito-userdebug
 export TZ=Asia/Dhaka #put before last build command
 mka bacon
 
