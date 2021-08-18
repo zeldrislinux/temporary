@@ -22,3 +22,4 @@ fi
 #mer. 18 août 2021 01:01:55 CEST try to fix target product
 #mer. 18 août 2021 01:15:12 CEST fix arch variant
 #mer. 18 août 2021 10:24:45 CEST fix parts preferences
+#mer. 18 août 2021 12:14:01 CEST fix import issue in parts
