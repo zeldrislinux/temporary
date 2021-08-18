@@ -1,5 +1,5 @@
 # sync rom
-repo init --depth=1 --no-repo-verify -u repo init -u https://git.stag-os.org/StagOS/manifest.git -b r11 -g default,-device,-mips,-darwin,-notdefault
+repo init --depth=1 --no-repo-verify -u https://git.stag-os.org/StagOS/manifest.git -b r11 -g default,-device,-mips,-darwin,-notdefault
 git clone https://github.com/shashank1436/local_manifest.git --depth 1 -b main .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
