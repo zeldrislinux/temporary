@@ -1,13 +1,11 @@
-# Change to unofficial build.
-# Update to 5.1.3 https://twitter.com/dotosofficial/status/1424450801250885634
 # sync rom
-repo init --depth=1 --no-repo-verify -u git://github.com/DotOS/manifest.git -b dot11 -g default,-device,-mips,-darwin,-notdefault
-git clone https://github.com/linuxmobile/local_manifest --depth 1 -b dotos .repo/local_manifests
+repo init --depth=1 --no-repo-verify -u https://github.com/exthmui/android.git -b exthm-11 -g default,-device,-mips,-darwin,-notdefault
+git clone https://github.com/linuxmobile/local_manifest --depth 1 -b exthm .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j$(nproc --all) || repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
 source build/envsetup.sh
-lunch dot_chiron-userdebug
+lunch exthm_chiron-userdebug
 export TZ=Asia/Dhaka 
 make bacon -j$(nproc --all)
 
