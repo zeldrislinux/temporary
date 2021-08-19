@@ -30,3 +30,4 @@ fi
 #jeu. 19 août 2021 18:25:52 CEST add refresh rate settings to part
 #jeu. 19 août 2021 18:26:35 CEST build gapps
 #jeu. 19 août 2021 20:36:10 CEST fix refresh  rate settings
+#jeu. 19 août 2021 22:47:25 CEST fix missing imports
