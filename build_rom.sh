@@ -5,7 +5,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 # build rom
 source build/envsetup.sh
-export TARGET_INCLUDE_GAPPS=false
+#export TARGET_INCLUDE_GAPPS=false
 lunch radiant_vayu-user
 mka bacon
 
