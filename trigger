@@ -31,3 +31,4 @@ fi
 #jeu. 19 août 2021 18:26:35 CEST build gapps
 #jeu. 19 août 2021 20:36:10 CEST fix refresh  rate settings
 #jeu. 19 août 2021 22:47:25 CEST fix missing imports
+#jeu. 19 août 2021 22:50:51 CEST add missing xml
