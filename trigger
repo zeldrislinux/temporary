@@ -27,3 +27,4 @@ fi
 #jeu. 19 août 2021 11:42:11 CEST use pe hals
 #jeu. 19 août 2021 13:14:49 CEST fix hals remote
 #jeu. 19 août 2021 15:13:49 CEST fix xml parsing
+#jeu. 19 août 2021 18:25:52 CEST add refresh rate settings to part
