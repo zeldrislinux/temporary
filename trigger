@@ -25,3 +25,4 @@ fi
 #mer. 18 août 2021 12:14:01 CEST fix import issue in parts
 #mer. 18 août 2021 14:43:52 CEST fix parts imports
 #jeu. 19 août 2021 11:42:11 CEST use pe hals
+#jeu. 19 août 2021 13:14:49 CEST fix hals remote
