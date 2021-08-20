@@ -1,5 +1,5 @@
 # sync rom
-repo init --depth=1 --no-repo-verify -u git://github.com/PotatoProject/manifest.git -b dumaloo-release -g default,-device,-mips,-darwin,-notdefault
+repo init --depth=1 --no-repo-verify -u https://github.com/PotatoProject/manifest.git -b dumaloo-release -g default,-device,-mips,-darwin,-notdefault
 git clone https://github.com/Th30utlaw/local_manifest.git --depth 1 -b posp .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
