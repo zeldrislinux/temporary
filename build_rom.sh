@@ -6,7 +6,6 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 # build rom
 . build/envsetup.sh
 lunch nad_RMX2185-userdebug
-export TZ=Asia/Jakarta
 mka nad
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
