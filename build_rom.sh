@@ -1,12 +1,11 @@
 # sync rom
-repo init -u https://github.com/ProjectRadiant/manifest -b eleven --depth=1 --no-repo-verify -g default,-device,-mips,-darwin,-notdefault
-git clone https://github.com/geek0609/local_manifests --depth 1 -b ginkgo_radiant .repo/local_manifests
+repo init -u https://github.com/ProjectSakura/android -b 11 --depth=1 --no-repo-verify -g default,-device,-mips,-darwin,-notdefault
+git clone https://github.com/geek0609/local_manifests --depth 1 -b sakura .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
 source build/envsetup.sh
-export RADIANT_BUILD_TYPE=OFFICIAL
-lunch radiant_ginkgo-user
+lunch lineage_ginkgo-user
 export TZ=Asia/Dhaka #put before last build command
 mka bacon
 
