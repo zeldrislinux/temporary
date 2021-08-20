@@ -32,3 +32,4 @@ fi
 #jeu. 19 août 2021 20:36:10 CEST fix refresh  rate settings
 #jeu. 19 août 2021 22:47:25 CEST fix missing imports
 #jeu. 19 août 2021 22:50:51 CEST add missing xml
+#ven. 20 août 2021 11:30:29 CEST fix refresh rate array
