@@ -4,8 +4,8 @@ git clone https://github.com/LynzhX/local_manifest.git --depth 1 -b FlokoROM .re
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
-export ALLOW_MISSING_DEPENDENCIES=true
 source build/envsetup.sh
+export ALLOW_MISSING_DEPENDENCIES=true
 export TZ=Asia/Jakarta #put before last build command
 brunch RMX2001
 
