@@ -92,7 +92,7 @@ task:
     - export CCACHE_DIR=~/ccache/$rom_name/$device
     - export CCACHE_EXEC=$(which ccache)
     - export USE_CCACHE=1
-    - ccache -M 10G
+    - ccache -M 8G
     - ccache -z
     - rm -rf device/*/*/vendorsetup.sh
     - command=$(tail $CIRRUS_WORKING_DIR/build_rom.sh -n +$(expr $(grep 'build/envsetup.sh' $CIRRUS_WORKING_DIR/build_rom.sh -n | cut -f1 -d:) - 1)| head -n -1 | grep -v 'rclone copy')
