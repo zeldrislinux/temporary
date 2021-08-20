@@ -6,7 +6,6 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 # build rom
 . build/envsetup.sh
 lunch nad_RMX2185-userdebug
-export USE_GAPPS=true
 export TZ=Asia/Jakarta
 mka nad
 
