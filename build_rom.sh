@@ -3,7 +3,7 @@ repo init --depth=1 -u git://github.com/DotOS/manifest.git -b dot11 -g default,-
 
 git clone https://github.com/P-Salik/local_manifest --depth=1 -b DotOS .repo/local_manifests
 
-repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j$(nproc --all) || repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
+repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j$(nproc --all)
 
 # build
 source build/envsetup.sh
