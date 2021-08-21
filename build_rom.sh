@@ -3,7 +3,7 @@ repo init -q --no-repo-verify --depth=1 https://github.com/Corvus-R/android_mani
 
 git clone https://github.com/Yasundram/local_manifest --depth 1 -b 30c .repo/local_manifests
 
-repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j 30 || repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
+repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 
 # build rom
