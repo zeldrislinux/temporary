@@ -1,14 +1,14 @@
 # sync rom
 repo init -q --no-repo-verify --depth=1 https://github.com/Corvus-R/android_manifest.git -b 11 -g default,-device,-mips,-darwin,-notdefault
 
-git clone https://github.com/Yasundram/local_manifest --depth 1 -b corvus .repo/local_manifests
+git clone https://github.com/Yasundram/local_manifest --depth 1 -b 30c .repo/local_manifests
 
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j 30 || repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 
 # build rom
 source build/envsetup.sh
-lunch corvus_RMX1941-userdebug
+lunch corvus_RMX3171-userdebug
 export TZ=Asia/Kolkata #put before last build command
 make corvus
 
