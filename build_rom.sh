@@ -7,6 +7,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 source build/envsetup.sh
 lunch exthm_rosy-userdebug
 export TZ=Asia/Dhaka #put before last build command
+export TARGET_GAPPS_ARCH=arm64
 mka bacon
 
 
