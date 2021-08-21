@@ -1,18 +1,46 @@
-AospExtended custom ROM for Redmi Note 4
+PixelExperience Plus custom ROM for Redmi Note 6pro
 ==============================
 
-AospExtended [Custom ROM](https://beebom.com/best-custom-roms-android-phones/) for Redmi Note 4(code name mido)
+Support : https://t.me/tulipofficial
 
-[Features as video](https://www.youtube.com/watch?v=KuQ9jIVmOXY) or [Features as text](https://forum.xda-developers.com/t/rom-11-0-aospextended-rom-v8-0-unofficial-surya.4202905/)
 
-[Screenshots](https://t.me/Apon77Mido/5270) or [Video](https://www.youtube.com/watch?v=KuQ9jIVmOXY)
+Pixelexperience (tulip) : https://t.me/tulip_pe
 
-Distributed [here](https://t.me/rn4downloads/4885)
 
-Estimated installation no.: 150-500
+[Screenshots](https://t.me/tulipofficial/715321) 
 
-How to use this repository
--------------------
 
-* [Instructions if you want to develop AospExtended custom ROM as a developer](https://github.com/Apon77/mido-AospExtended-Apon77/blob/main/Instructions%20for%20developers.md)
-* [Instructions if you want to use AospExtended custom ROM in your device as a user](https://github.com/Apon77/mido-AospExtended-Apon77/blob/main/Instructions%20for%20users.md)
+
+Distributed [here](https://t.me/tulipofficial)
+
+
+
+The Xiaomi Redmi Note 6 Pro (codenamed _"tulip"_) is a mid-range smartphone from Xiaomi announced in September 2018.
+
+## Device specifications
+
+| Device                  | Xiaomi Redmi Note 6 Pro                                     |
+| ----------------------- | :---------------------------------------------------------- |
+| SoC                     | Qualcomm SDM660 Snapdragon 636                              |
+| CPU                     | 8x Qualcomm® Kryo™ 260 CPU                                  |
+| GPU                     | Adreno 509                                                  |
+| Memory                  | 4GB / 6GB RAM (LPDDR4X)                                     |
+| Shipped Android version | 8.1.0                                                       |
+| Storage                 | 64GB eMMC 5.1 flash storage                                 |
+| MicroSD                 | Up to 256 GB                                                |
+| Battery                 | Non-removable Li-Po 4000 mAh                                |
+| Dimensions              | 157.9 x 76.4 x 8.3 mm                                       |
+| Display                 | 2280 x 1080 (19:9), 6.26 inch                               |
+| Rear camera 1           | 12 MP, f/1.9, 1/2.55", 1.4µm, dual pixel PDAF               |
+| Rear camera 2           | 5 MP, f/2.2, 1.12µm, depth sensor                           |
+| Front camera 1          | 20 MP, f/2.0, 0.9µm                                         |
+| Front camera 2          | 2 MP, f/2.2, 1.75µm, depth sensor                           |
+
+
+## Device picture
+
+![Xiaomi Redmi Note 6 Pro](https://img.timesnownews.com/story/1544521578-Xiaomi_Redmi_Note_6_Pro_colours.jpg)
+
+
+
+Estimated installation no.: 100+ .
