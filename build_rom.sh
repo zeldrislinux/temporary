@@ -4,7 +4,7 @@ git clone https://github.com/Jamesgosling2004/local_manifest.git --depth 1 -b ma
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
-source . build/envsetup.sh
+source build/envsetup.sh
 lunch descendant_RMX1831-userdebug
 export TZ=Asia/Dhaka #put before last build command
 mka descendant
