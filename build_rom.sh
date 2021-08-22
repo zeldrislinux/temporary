@@ -1,14 +1,12 @@
 # sync rom
 repo init --depth=1 --no-repo-verify -u git://github.com/lighthouse-os/manifest.git -b raft -g default,-device,-mips,-darwin,-notdefault
-git clone https://github.com/Dreadwyrm/local_manifests --depth 1 -b ginkgo-Lighthouse .repo/local_manifests
+git clone https://github.com/Dreadwyrm/local_manifests --depth 1 -b Lhos .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
 . build/envsetup.sh
 lunch lighthouse_ginkgo-userdebug
 export TZ=Asia/Jakarta
-export WITH_GAPPS=true
-export SELINUX_IGNORE_NEVERALLOWS=true
 mka lighthouse
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
