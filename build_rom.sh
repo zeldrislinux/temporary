@@ -1,11 +1,11 @@
 # sync rom
-repo init --depth=1 --no-repo-verify -u git://github.com/Stellar-OS/android.git -b stellar-S1 -g default,-device,-mips,-darwin,-notdefault
-git clone https://github.com/ItoRenz/local_manifest.git --depth 1 -b stellar .repo/local_manifests
+repo init --depth=1 --no-repo-verify -u git://github.com/ProjectSakura/android.git -b 11 -g default,-device,-mips,-darwin,-notdefault
+git clone https://github.com/ItoRenz/local_manifest.git --depth 1 -b sakura_mojito .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
 . build/envsetup.sh
-lunch stellar_rolex-userdebug
+lunch lineage_mojito-user
 export TZ=Asia/Jakarta
 mka bacon
 
