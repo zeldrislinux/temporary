@@ -5,7 +5,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 # build rom
 source build/envsetup.sh
-lunch conquer_vince-user
+lunch conquer_vince-userdebug
 export TZ=Asia/Dhaka #put before last build command
 make carthage
 
