@@ -6,6 +6,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 # build rom
 . build/envsetup.sh
 lunch lighthouse_ginkgo-userdebug
+export SELINUX_IGNORE_NEVERALLOWS=true
 export TZ=Asia/Jakarta
 mka lighthouse
 
