@@ -9,6 +9,7 @@ Distributed [here](https://t.me/rn4downloads/4885)
 
 Estimated installation 
 
+
 How to use this repository 
 ----------------
 * [Instructions if you want to develop AospExtended custom ROM as a developer](https://github.com/Apon77/mido-AospExtended-Apon77/blob/main/Instructions%20for%20developers.md)
