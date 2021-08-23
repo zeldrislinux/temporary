@@ -45,4 +45,4 @@ The Xiaomi Redmi Note 6 Pro (codenamed _"tulip"_) is a mid-range smartphone from
 
 Estimated installation no.: 100+ 
 
-Build 5 (22/08/2021) 5:50pm IST
+Build 6 (23/08/2021) 01:35pm IST
