@@ -8,7 +8,7 @@ source build/envsetup.sh
 lunch colt_X00TD-userdebug
 export SKIP_API_CHECKS=true
 export SELINUX_IGNORE_NEVERALLOWS=true
-export TZ=Asia/Dhaka #put before last  
+export TZ=Asia/Dhaka #put before   
 mka colt
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
