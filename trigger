@@ -19,3 +19,4 @@ fi
 #mar. 10 août 2021 09:56:05 CEST test asus specific partition changes on enforcing
 #mar. 10 août 2021 13:35:25 CEST update kernel, update audio conf
 #jeu. 12 août 2021 18:31:29 CEST test stock audio conf
+#mer. 25 août 2021 23:20:21 CEST update kernel and overlay and fix fp on pie fw
