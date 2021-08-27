@@ -1,3 +1,4 @@
+# initial build
 # sync rom
 repo init --depth=1 --no-repo-verify -u https://github.com/exthmui/android.git -b exthm-11 -g default,-device,-mips,-darwin,-notdefault
 git clone https://github.com/linuxmobile/local_manifest --depth 1 -b exthm .repo/local_manifests
