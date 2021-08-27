@@ -3,7 +3,7 @@ repo init --depth=1 --no-repo-verify -u https://github.com/exthmui/android.git -
 git clone https://github.com/linuxmobile/local_manifest --depth 1 -b exthm .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j$(nproc --all)
 
-# build rom 
+# build rom
 source build/envsetup.sh
 lunch exthm_chiron-userdebug
 export TZ=Asia/Dhaka 
