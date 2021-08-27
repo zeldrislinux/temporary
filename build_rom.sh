@@ -1,7 +1,7 @@
 # sync rom
 repo init --depth=1 -u git://github.com/xdroid-CAF/xd_manifest.git -b eleven -g default,-device,-mips,-darwin,-notdefault
 git clone https://github.com/Unknownbitch07/local_manifest.git --depth=1 -b xdroid .repo/local_manifests
-repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8 || repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
+repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 # build rom
 source build/envsetup.sh
 lunch xdroid_tissot-userdebug
