@@ -23,3 +23,4 @@ fi
 #mer. 25 août 2021 23:20:40 CEST update kernel and overlay and fix fp on pie fw
 #mer. 25 août 2021 23:27:32 CEST fix test
 #jeu. 26 août 2021 12:49:16 CEST try to fix camera hang bug
+#ven. 27 août 2021 11:41:48 CEST try to fix video rec bug
