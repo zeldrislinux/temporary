@@ -6,10 +6,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 # build rom
 . build/envsetup.sh
 lunch banana_RMX1941-userdebug
-export SKIP_API_CHECKS=true
-export SKIP_ABI_CHECKS=true
 export ALLOW_MISSING_DEPENDENCIES=true
-export TZ=Asia/Jakarta
 make banana
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
