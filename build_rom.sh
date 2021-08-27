@@ -3,7 +3,7 @@ repo init --depth=1 -u git://github.com/xdroid-CAF/xd_manifest -b eleven -g defa
 git clone https://github.com/Unknownbitch07/local_manifest.git --depth=1 -b xdroid .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8 || repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 # build rom
-. build/envsetup.sh
+source build/envsetup.sh
 lunch xdroid_tissot-userdebug
 export TZ=Asia/Kolkata #put before last build command
 make xd
