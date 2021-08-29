@@ -1,11 +1,11 @@
 # sync rom
 repo init --depth=1 --no-repo-verify -u https://github.com/NusantaraProject-ROM/android_manifest.git -b 11 -g default,-device,-mips,-darwin,-notdefault
-git clone https://github.com/Fraschze97/local_manifest --depth=1 -b Nusantara-11 .repo/local_manifests
+git clone https://github.com/Fraschze97/local_manifest --depth=1 -b Nusantara-Juice .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
 . build/envsetup.sh
-lunch nad_RMX1941-userdebug
+lunch nad_juice-userdebug
 export SKIP_API_CHECKS=true
 export SKIP_ABI_CHECKS=true
 export ALLOW_MISSING_DEPENDENCIES=true
