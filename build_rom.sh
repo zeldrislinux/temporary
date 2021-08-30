@@ -5,8 +5,9 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 # build rom
 source build/envsetup.sh
-lunch radiant_mojito-userdebug
+export TARGET_INCLUDE_GAPPS=false
 export RADIANT_BUILD_TYPE=OFFICIAL
+lunch radiant_mojito-userdebug
 export TZ=Asia/Dhaka #put before last build command
 mka bacon
 
