@@ -89,13 +89,6 @@ task:
     - grep _jasmine_sprout $CIRRUS_WORKING_DIR/build_rom.sh > /dev/null && device=jasmine_sprout
 
     - cd ~/roms/$rom_name
-    - rm -rf hardware/qcom/audio
-    - rm -rf hardware/qcom-caf/msm8996/media
-    - rm -rf hardware/qcom-caf/msm8996/display
-    - rm -rf hardware/qcom-caf/msm8996/audio
-    - git clone https://github.com/PixelExperience/hardware_qcom-caf_msm8996-r_media.git hardware/qcom-caf/msm8996/media
-    - git clone https://github.com/PixelExperience/hardware_qcom-caf_msm8996-r_display.git hardware/qcom-caf/msm8996/display
-    - git clone https://github.com/PixelExperience/hardware_qcom-caf_msm8996-r_audio.git hardware/qcom-caf/msm8996/audio
     - export CCACHE_DIR=~/ccache/$rom_name/$device
     - export CCACHE_EXEC=$(which ccache)
     - export USE_CCACHE=1
