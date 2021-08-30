@@ -3,7 +3,7 @@ repo init --depth=1 --no-repo-verify -u https://github.com/NusantaraProject-ROM/
 git clone https://github.com/linuxmobile/local_manifest --depth 1 -b nusantara .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j$(nproc --all) || repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
-# build rom
+# build rom 
 source build/envsetup.sh
 lunch nad_chiron-userdebug
 export TZ=Asia/Dhaka 
