@@ -1,7 +1,7 @@
 # sync rom
 repo init --depth=1 -u https://github.com/Wave-Project/manifest -b r -g default,-device,-mips,-darwin,-notdefault
 
-git clone https://github.com/yash3056/local_manifest.git -b wave .repo/local_manifests
+git clone https://github.com/yashlearnpython/local_manifest.git -b wave .repo/local_manifests
 
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j$(nproc --all) # repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
