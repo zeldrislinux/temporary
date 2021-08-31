@@ -5,7 +5,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 # build rom
 . build/envsetup.sh
-lunch nad_rolex-user
+lunch nad_rolex-userdebug
 export TZ=Asia/Jakarta
 export KBUILD_USERNAME=ItoRenz
 mka nad
