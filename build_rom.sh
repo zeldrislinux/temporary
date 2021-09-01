@@ -1,11 +1,11 @@
 # sync rom
-repo init --depth=1 --no-repo-verify -u git://github.com/exthmui/android.git -b exthm-11 -g default,-device,-mips,-darwin,-notdefault
-git clone https://github.com/marsellinus/local_manifest --depth 1 -b 11-exthm .repo/local_manifests
+repo init --depth=1 --no-repo-verify -u git://github.com/Stellar-OS/android.git -b stellar-S1 -g default,-device,-mips,-darwin,-notdefault
+git clone https://github.com/marsellinus/local_manifest --depth 1 -b mojito-stellar .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
 source build/envsetup.sh
-lunch exthm_mojito-userdebug
+lunch stellar_mojito-userdebug
 export TZ=Asia/Jakarta #put before last build command
 mka bacon
 
