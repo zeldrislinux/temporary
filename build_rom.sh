@@ -5,7 +5,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 # build rom
 source build/envsetup.sh
-lunch corvus_holland1-usedebug
+lunch du_holland1-usedebug
 export TZ=Asia/Kolkata #put before last build command
 make bacon
 
