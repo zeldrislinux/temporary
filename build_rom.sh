@@ -1,12 +1,12 @@
 # sync rom
-repo init -u https://github.com/ProjectSakura/android -b 11 --depth=1 --no-repo-verify -g default,-device,-mips,-darwin,-notdefault
-git clone https://github.com/geek0609/local_manifests --depth 1 -b mojito_sakura .repo/local_manifests
+repo init --depth=1 --no-repo-verify -u git://github.com/exthmui/android.git -b exthm-11 -g default,-device,-mips,-darwin,-notdefault
+git clone https://github.com/marsellinus/local_manifest --depth 1 -b 11-exthm .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
 source build/envsetup.sh
-lunch lineage_mojito-userdebug
-export TZ=Asia/Dhaka #put before last build command
+lunch exthm_mojito-userdebug
+export TZ=Asia/Jakarta #put before last build command
 mka bacon
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
