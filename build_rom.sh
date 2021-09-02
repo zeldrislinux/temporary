@@ -1,8 +1,7 @@
-# 04/08/2021 | Building CherishOS 2.8 Changelog: Removed lawnchair in gapps build, added ttl to kernel.
 # sync rom
 repo init --depth=1 --no-repo-verify -u git://github.com/CherishOS/android_manifest.git -b eleven -g default,-device,-mips,-darwin,-notdefault
 git clone https://github.com/linuxmobile/local_manifest --depth 1 -b linuchin .repo/local_manifests
-repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j$(nproc --all) || repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
+repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j$(nproc --all) 
 
 # build rom 
 source build/envsetup.sh
