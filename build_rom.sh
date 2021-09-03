@@ -9,7 +9,7 @@ lunch aosip_X00TD-userdebug
 export SELINUX_IGNORE_NEVERALLOWS=true
 export SKIP_API_CHECKS=true
 export WITH_GAPPS=true
-export TZ=Asia/Dhaka #put 
+export TZ=Asia/Dhaka 
 time m kronic
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
