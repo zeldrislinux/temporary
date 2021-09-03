@@ -5,7 +5,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 # build rom
 . build/envsetup.sh
-lunch aosp_RMX2001-userdebug
+lunch aosp_RMX2001-user
 export TZ=Asia/Dhaka #put before last build command
 mka bacon
 
