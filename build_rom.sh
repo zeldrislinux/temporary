@@ -9,7 +9,7 @@ lunch aosp_X00T-userdebug
 export SELINUX_IGNORE_NEVERALLOWS=true
 export SKIP_API_CHECKS=true
 export ALLOW_MISSING_DEPENDENCIES=true
-export TZ=Asia/Dhaka #put before last 
+export TZ=Asia/Dhaka #put before
 mka bacon
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
