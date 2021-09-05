@@ -5,7 +5,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 # build rom
 source build/envsetup.sh
-lunch banana_lavender-user
+lunch banana_lavender-userdebug
 export TZ=Asia/Dhaka #put before last build command
 make banana
 
