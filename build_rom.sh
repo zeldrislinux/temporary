@@ -1,5 +1,5 @@
 # sync rom
-repo init -u https://github.com/PinCredible/manifest -b ace
+repo init --depth=1 --no-repo-verify -u https://github.com/PinCredible/manifest.git -b ace -g default,-device,-mips,-darwin,-notdefault
 git clone https://github.com/PinCredible/local-manifest.git --depth 1 -b pex .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
