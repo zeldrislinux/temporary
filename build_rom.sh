@@ -7,6 +7,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 source build/envsetup.sh
 lunch banana_lavender-userdebug
 export TZ=Asia/Dhaka #put before last build command
+export SELINUX_IGNORE_NEVERALLOWS=false
 make banana
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
