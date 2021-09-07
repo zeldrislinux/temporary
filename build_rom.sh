@@ -1,6 +1,6 @@
 # sync rom
-repo init -u https://github.com/PixelOS-Pixelish/manifest -b eleven --depth=1 --no-repo-verify -g default,-device,-mips,-darwin,-notdefault
-git clone https://github.com/whyredfire/local_manifests.git --depth 1 -b PixelOS .repo/local_manifests
+repo init -u https://github.com/PixelOS-Pixelish/manifest -b eleven-plus --depth=1 --no-repo-verify -g default,-device,-mips,-darwin,-notdefault
+git clone https://github.com/whyredfire/local_manifests.git --depth 1 -b Pixelish .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
