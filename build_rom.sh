@@ -1,7 +1,7 @@
 # sync rom
 repo init --depth=1 --no-repo-verify -u git://github.com/AospExtended/manifest.git -b 11.x -g default,-device,-mips,-darwin,-notdefault # Initilizeing dotOS11 sources
 git clone https://github.com/RahulPalXDA/local_manifest.git --depth=1 -b AEX_holland2 .repo/local_manifests # adding builder's local_manifest to Initilized sources
-repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8 || repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8 # Syncing previously Initilized sources
+repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8 # Syncing previously Initilized sources
 
 # build rom
 source build/envsetup.sh
