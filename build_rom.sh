@@ -1,11 +1,11 @@
 # sync rom
 repo init --depth=1 --no-repo-verify -u https://github.com/PixelExperience/manifest -b eleven-plus -g default,-device,-mips,-darwin,-notdefault # Initilizeing dotOS11 sources
-git clone https://github.com/RahulPalXDA/local_manifest.git --depth=1 -b pex_holland2 .repo/local_manifests # adding builder's local_manifest to Initilized sources
+git clone https://github.com/RahulPalXDA/local_manifest.git --depth=1 -b pex_tulip .repo/local_manifests # adding builder's local_manifest to Initilized sources
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8 # Syncing previously Initilized sources
 
 # build rom
 source build/envsetup.sh
-lunch aosp_holland2-userdebug
+lunch aosp_tulip-userdebug
 export TZ=Asia/Kolkata #put before last build command (setting timezone)
 mka bacon
 
