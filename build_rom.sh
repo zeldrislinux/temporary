@@ -3,10 +3,6 @@ repo init --depth=1 --no-repo-verify -u git://github.com/PotatoProject/manifest 
 git clone https://github.com/IceBreaker2451/local_manifest --depth 1 -b potato .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
-# Clang
-rm -rf prebuilts/clang/host/linux-x86
-git clone https://github.com/4-19-Tulip/android_prebuilts_clang_host_linux-x86_clang-7612306 prebuilts/clang/host/linux-x86
-
 # build rom
 source build/envsetup.sh
 lunch potato_tulip-userdebug
