@@ -3,6 +3,7 @@ git clone https://github.com/rabin-tech/local_manifest.git --depth 1 -b hycon .r
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 . build/envsetup.sh
+export HYCON_BUILD_TYPE=OFFICIAL
 lunch aosp_tulip-userdebug
 mka bacon
 
