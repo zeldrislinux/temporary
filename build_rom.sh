@@ -9,6 +9,10 @@ lunch hentai_RMX2020-userdebug
 export TZ=Asia/Dhaka #put before last build command
 export SKIP_ABI_CHECKS=true
 export SKIP_API_CHECKS=true
+export ALLOW_MISSING_DEPENDENCIES=true
+export BUILD_BROKEN_DUP_RULES=true
+export BUILD_BROKEN_USES_BUILD_COPY_HEADERS=true
+export BUILD_BROKEN_VINTF_PRODUCT_COPY_FILES=true
 make otapackage -j$(nproc --all)   
 
 # upload   rom
