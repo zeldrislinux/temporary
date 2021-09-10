@@ -7,7 +7,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 . build/envsetup.sh
 lunch evolution_X01AD-userdebug
 export ALLOW_MISSING_DEPENDENCIES=TRUE
-export TZ=Asia/Kolkata #put before last build command
+export SKIP_ABI_CHECKS=TRUE
 mka evolution
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
