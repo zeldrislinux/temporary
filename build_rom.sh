@@ -1,11 +1,11 @@
 # sync rom
 repo init --depth=1 --no-repo-verify -u git://github.com/bananadroid/android_manifest.git -b 11 -g default,-device,-mips,-darwin,-notdefault
-git clone https://github.com/rasenss/local_manifest.git --depth 1 -b 11.0 .repo/local_manifests
+git clone https://github.com/marsellinus/local_manifest.git --depth 1 -b mojito-banana .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
 source build/envsetup.sh
-lunch banana_ginkgo-userdebug
+lunch banana_mojito-userdebug
 export TZ=Asia/Jakarta #put before last build command
 make banana
 
