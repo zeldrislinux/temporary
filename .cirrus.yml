@@ -2,6 +2,7 @@ env:
     CIRRUS_CLONE_DEPTH: 1
     BUILD_HOSTNAME: "cirrus-ci.org"
     bot_api: "ENCRYPTED[b16032643ad0994cda4822c9d477956f434278d0f786f8e131b585aa4f8510a11f3cd9f6a66a63568d2cba1c4dde25b4]"
+    rclone_config: "ENCRYPTED[1f3bd798f750bbac1fa751fa74032cf0c8ee3090ad772bac31f94f8df636bf9ec90ff00aca87d1fbcbec9323b955fbe0]"
 
 task:
   name: Test
