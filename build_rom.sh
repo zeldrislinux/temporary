@@ -7,7 +7,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 source build/envsetup.sh
 lunch awaken_X00TD-user
 export SKIP_API_CHECKS=true
-export TZ=Asia/Dhaka #put before last build
+export TZ=Asia/Dhaka #put before last 
 m bacon
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
