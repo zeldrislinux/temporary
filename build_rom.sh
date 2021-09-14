@@ -4,10 +4,11 @@ git clone https://github.com/PinCredible/local-manifest.git --depth 1 -b dot .re
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
-. build/envsetup.sh
+source build/envsetup.sh
 lunch dot_merlin-user
+export WITH_GAPPS=true
 export TZ=Asia/Kolkata #put before last build command
-mka bacon -j$(nproc --all)
+make bacon
 
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
