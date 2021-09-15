@@ -8,6 +8,7 @@ source build/envsetup.sh
 lunch aosp_juice-userdebug
 export TZ=Asia/Jakarta #put before last build command
 export ALLOW_MISSING_DEPENDENCIES=true
+export SELINUX_IGNORE_NEVERALLOWS=true
 m aex -j$(nproc --all)
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
