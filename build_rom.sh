@@ -2,7 +2,7 @@
 repo init --depth=1 --no-repo-verify -u https://github.com/bananadroid/android_manifest.git -b 11 -g default,-device,-mips,-darwin,-notdefault
 git clone https://github.com/xoo2001/local_manifest.git --depth 1 -b ban .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
-
+ 
 # build rom
 source build/envsetup.sh
 lunch banana_ido-userdebug
