@@ -4,7 +4,7 @@ git clone https://github.com/LynzhX/local_manifest.git --depth=1 -b eOS .repo/lo
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
-. build/envsetup.sh
+source build/envsetup.sh
 export TZ=Asia/Jakarta #put before last build command
 lunch lineage_RMX2001-userdebug
 mka bacon
