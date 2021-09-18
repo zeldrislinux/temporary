@@ -3,7 +3,7 @@ repo init --depth=1 --no-repo-verify -u git://github.com/Project-LegionOS/manife
 git clone https://github.com/N4veenNK/local-manifest.git --depth 1 -b legion .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
-#build rom
+# build rom
 source build/envsetup.sh
 lunch legion_X00TD-userdebug
 export ALLOW_MISSING_DEPENDENCIES=true
