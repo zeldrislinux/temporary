@@ -4,7 +4,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 . build/envsetup.sh
 lunch aosp_X01BD-userdebug
-export HYCON_BUILD_TYPE=OFFICIAL #put before last build command
+export HYCON_BUILD_TYPE=OFFICIAL
 export ALLOW_MISSING_DEPENDENCIES=TRUE
 mka bacon
 
