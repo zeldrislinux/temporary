@@ -1,7 +1,7 @@
 dotOS 11 custom ROM for 10orG (Holland2)
 =========================================
 
-ConquerOS [Custom ROM](https://conqueros.co/) for 10orG (code name: Holland2)
+[ConquerOS](https://conqueros.co/) Custom ROM for 10orG (code name: Holland2)
 
 Distributed [here](https://t.me/downloads10orG/)
 
