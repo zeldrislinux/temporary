@@ -4,7 +4,7 @@ git clone https://github.com/N4veenNK/local-manifest.git --depth 1 -b exthm .rep
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
-source build/envsetup.sh
+. build/envsetup.sh
 lunch exthm_X00T-userdebug
 export SKIP_ABI_CHECKS=true
 export SELINUX_IGNORE_NEVERALLOWS=true
