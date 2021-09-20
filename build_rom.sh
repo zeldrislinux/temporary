@@ -1,11 +1,13 @@
 # sync rom
 repo init --depth=1 --no-repo-verify -u https://github.com/RevengeOS/android_manifest -b r11.0 -g default,-device,-mips,-darwin,-notdefault
-git clone https://github.com/Dreadwyrm/local_manifests --depth 1 -b RevengeOS .repo/local_manifests
+git clone https://github.com/Dreadwyrm/local_manifests --depth 1 -b ros .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
 source build/envsetup.sh
 lunch revengeos_ginkgo-userdebug
+export BUILD_USERNAME=enprytna
+export BUILD_HOSTNAME=build
 export TZ=Asia/Jakarta #put before last build command
 make bacon
 
