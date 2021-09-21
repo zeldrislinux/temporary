@@ -4,11 +4,11 @@ git clone https://github.com/kryptoniteX/local_manifest.git --depth=1 -b aex_rap
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
-. build/envsetup.sh
+source build/envsetup.sh
 lunch aosp_raphael-userdebug
 export TZ=Asia/Kolkata
 export SKIP_ABI_CHECKS=TRUE
 export ALLOW_MISSING_DEPENDENCIES=TRUE #put before last build command
-make bacon
+m aex
 
 rclone copy out/target/product/$(grep unch $CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d ' ' -f 2 | cut -d _ -f 2 | cut -d - -f 1)/*.zip cirrus:$(grep unch $CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d ' ' -f 2 | cut -d _ -f 2 | cut -d - -f 1) -P
