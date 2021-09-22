@@ -6,7 +6,6 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 # build rom
 source build/envsetup.sh
 lunch aosp_raphael-userdebug
-export TZ=Asia/Kolkata
 export SKIP_ABI_CHECKS=TRUE
 export ALLOW_MISSING_DEPENDENCIES=TRUE #put before last build command
 m aex
