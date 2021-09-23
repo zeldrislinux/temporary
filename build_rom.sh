@@ -7,7 +7,7 @@ source build/envsetup.sh
 lunch p404_lavender-userdebug
 export SELINUX_IGNORE_NEVERALLOWS=true
 export TZ=Asia/Kolkata #put before last build command
-threads=-j$(( $(nproc )/2 | bc )) #use half cpu cores only
+threads=-j$(( $(nproc )/2 | bc )) # use half cpu cores only
 make bacon $threads
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
