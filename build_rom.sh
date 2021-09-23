@@ -3,7 +3,7 @@ repo init --depth=1 --no-repo-verify -u git://github.com/exthmui/android.git -b 
 git clone https://github.com/officialputuid/RMX2001-exTHmUI --depth 1 -b MASTER .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
-# build rom **
+# build rom ***
 source build/envsetup.sh
 lunch exthm_RMX2001-user
 export EXTHM_GAPPS=true
