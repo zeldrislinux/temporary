@@ -6,6 +6,8 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 # build rom
 source build/envsetup.sh
 lunch exthm_RMX2001-user
+export EXTHM_GAPPS=true
+export TARGET_GAPPS_ARCH=arm64
 export TZ=Asia/Dhaka #put before last build command
 mka bacon
 
