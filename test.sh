@@ -74,11 +74,21 @@ if [[ $BRANCH == *pull/* ]]; then
 cd /tmp/cirrus-ci-build
 PR_NUM=$(echo $BRANCH|awk -F '/' '{print $2}')
 AUTHOR=$(gh pr view $PR_NUM|grep author| awk '{print $2}')
+<<<<<<< HEAD
 for value in ajitlenka30 basic-general ZunayedDihan Badroel07 deadline646 STRK-ND ECr34T1v3 ASHISH11948
+=======
+for value in ajitlenka30 basic-general ZunayedDihan Badroel07 Ravithakral SumonSN
+>>>>>>> e4669df (limit push users [skip ci])
 do
     if [[ $AUTHOR == $value ]]; then
     echo Please check \#pr instruction in telegram group.; exit 1; fi
 done
+fi
+
+if [[ $CIRRUS_USER_PERMISSION == write ]]; then
+if [ -z "$CIRRUS_PR" ]; then echo fine; else
+echo You are push user. Please follow pinned message in push group.; exit 1
+fi
 fi
 
 echo Test passed
