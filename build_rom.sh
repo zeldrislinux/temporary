@@ -1,11 +1,11 @@
 # sync rom
 repo init --depth=1 --no-repo-verify -u https://github.com/descendant-xi/manifests.git -b eleven-staging -g default,-device,-mips,-darwin,-notdefault
 git clone https://github.com/a7imranjha/local_manifest.git --depth 1 -b des .repo/local_manifests
-repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j30
+repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
 source build/envsetup.sh
-lunch descendant_olivewood-user
+lunch descendant_olivewood-userdebug
 export TZ=Asia/Karachi #put before last build command
 mka descendant
 
