@@ -1,7 +1,7 @@
 LineageOS custom ROM for 10orG (Holland2)
 =========================================
 
-LineageOS [Custom ROM](https://lineageos.org/) for 10orG (code name: Holland2)
+[LineageOS](https://lineageos.org/) Custom ROM for 10orG (code name: Holland2)
 
 Distributed [here](https://t.me/downloads10orG/)
 
