@@ -7,6 +7,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 source build/envsetup.sh
 lunch p404_mojito-userdebug
 export ALLOW_MISSING_DEPENDENCIES=true
+export SELINUX_IGNORE_NEVERALLOWS=true
 export TZ=Asia/Bangkok #put before last build command
 make bacon
 
