@@ -5,7 +5,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 # build rom
 source build/envsetup.sh
-lunch descendant_olivewood-user
+lunch descendant_olivewood-userdebug
 export TZ=Asia/Karachi #put before last build command
 mka descendant
 
