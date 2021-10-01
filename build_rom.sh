@@ -6,7 +6,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 # build rom
 source build/envsetup.sh
 lunch xperience_Z01R-user
-export SELINUX_IGNORE_NEVERALLOWS_ON_USER=true
+#export SELINUX_IGNORE_NEVERALLOWS_ON_USER=true
 export TZ=Asia/Kolkata 
 make bacon -j$(nproc --all)
 
