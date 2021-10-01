@@ -1,7 +1,7 @@
-dotOS 11 custom ROM for 10orG (Holland2)
+Evolution-X 11 custom ROM for 10orG (Holland2)
 =========================================
 
-DotOS [Custom ROM](https://www.droidontime.com/) for 10orG (code name: Holland2)
+Evolution-X [Custom ROM](https://evolution-x.org/) for 10orG (code name: Holland2)
 
 Distributed [here](https://t.me/downloads10orG/)
 
