@@ -5,7 +5,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 # build rom
 . build/envsetup.sh
-lunch banana_juice-user
+lunch banana_juice-userdebug
 export TZ=Asia/Jakarta
 make banana
 
