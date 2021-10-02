@@ -1,4 +1,4 @@
-# sync rom
+# sync rom 
 repo init --depth=1 --no-repo-verify -u https://github.com/Project-Awaken/android_manifest -b 11 -g default,-device,-mips,-darwin,-notdefault
 git clone https://github.com/rk134/local_manifests.git --depth 1 -b awaken .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
