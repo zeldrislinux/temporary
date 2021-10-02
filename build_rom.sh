@@ -1,8 +1,8 @@
 # sync rom
 repo init --depth=1 --no-repo-verify -u https://github.com/LessAosp/manifest.git -b eleven -g default,-device,-mips,-darwin,-notdefault
 git clone https://github.com/ASHISH11948/local_manifest.git --depth 1 -b main .repo/local_manifests
-repo sync —force-sync packages/apps/Mantle 
-chmod a+x vendor/aosp/tools/generate_json_build_info.sh
+repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
+repo sync —force-sync packages/apps/Mantle
 
 # build rom
 . build/envsetup.sh
