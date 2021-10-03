@@ -1,9 +1,9 @@
 # sync rom
 repo init -u https://github.com/PixelOS-Pixelish/manifest -b eleven --depth=1 --no-repo-verify -g default,-device,-mips,-darwin,-notdefault
-git clone https://github.com/PixelOS-ginkgo/local_manifests.git --depth 1 -b r-player .repo/local_manifests
+git clone https://github.com/PixelOS-ginkgo/local_manifests.git --depth 1 -b eleven .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
-# build rom 
+# build rom
 source build/envsetup.sh
 lunch aosp_ginkgo-user
 export TZ=Asia/Dhaka #put before last build command
