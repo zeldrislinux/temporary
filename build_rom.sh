@@ -7,7 +7,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 source build/envsetup.sh
 lunch lineage_vince-eng
 export CIPHER_MAINTAINER=r_k87
-export CIPHER_GAPPS=true
+export CIPHER_GAPPS=false
 export TARGET_FACE_UNLOCK_SUPPORTED=true
 export TARGET_USES_BLUR=true
 export CIPHER_OFFICIAL=false
