@@ -4,6 +4,7 @@ git clone https://github.com/RahulPalXDA/local_manifest.git --depth=1 -b dot_hol
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8 # SYNC
 
 # build rom
+export CUSTOM_BUILD_TYPE=Handmade
 source build/envsetup.sh
 lunch dot_holland2-userdebug
 export TZ=Asia/Kolkata #put before last build command (setting timezone)
