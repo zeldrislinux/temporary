@@ -5,7 +5,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 # build rom
 source build/envsetup.sh
-lunch xtended_ulysse-user
+lunch xtended_ulova-user
 export TZ=Asia/Malaysia #put before last build command
 mka xtended
 
