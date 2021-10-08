@@ -5,7 +5,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 # build rom
 source build/envsetup.sh
-lunch dot_lavender-user
+lunch dot_lavender-userdebug
 export TZ=Asia/Dhaka #put before last build command
 make bacon
 
