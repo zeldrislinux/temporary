@@ -1,18 +1,32 @@
-AospExtended custom ROM for Redmi Note 4
+Octavi-OS custom ROM for Redmi Note 8
 ==============================
+OctaviOS is an AOSP based rom focusing on Unique and Smooth UI with handy features. OctaviOS is a reborn of pie based PearlOS.
 
-AospExtended [Custom ROM](https://beebom.com/best-custom-roms-android-phones/) for Redmi Note 4(code name mido)
+[UI Screenshots](https://t.me/octaviosGW/20339) & [Customization Screenshots](https://t.me/octaviosGW/20347)
 
-[Features as video](https://www.youtube.com/watch?v=KuQ9jIVmOXY) or [Features as text](https://forum.xda-developers.com/t/rom-11-0-aospextended-rom-v8-0-unofficial-surya.4202905/)
+Distributed [here](https://forum.xda-developers.com/t/rom-official-ginkgo-11-octavios-2-9-for-redmi-note-8-8t.4306155/)
 
-[Screenshots](https://t.me/Apon77Mido/5270) or [Video](https://www.youtube.com/watch?v=KuQ9jIVmOXY)
+Flashing Instructions
+==============================
+Clean flash:-
+1. Download ROM and latest firmware
+2. Reboot to Recovery
+3. Wipe cache, system, vendor
+4. Flash firmware
+5. Flash  ROM
+6. Flash Gapps (if Vanilla)
+7. Format Data
+8. Flash MagiskR (optional)
+9. Flash DFE (optional)
+10. Reboot to system
 
-Distributed [here](https://t.me/rn4downloads/4885)
+Dirty flash/Update:-
+1. Download ROM and latest firmware
+2. Reboot to Recovery
+3. Flash firmware
+4. Flash ROM
+8. Flash DFE (if decrypted)
+5. Wipe cache
+6. Reboot to system
 
-Estimated installation no.: 150-500
-
-How to use this repository
--------------------
-
-* [Instructions if you want to develop AospExtended custom ROM as a developer](https://github.com/Apon77/mido-AospExtended-Apon77/blob/main/Instructions%20for%20developers.md)
-* [Instructions if you want to use AospExtended custom ROM in your device as a user](https://github.com/Apon77/mido-AospExtended-Apon77/blob/main/Instructions%20for%20users.md)
+[Support Group](https://t.me/octaviosGW)
