@@ -1,12 +1,13 @@
 # sync rom
 repo init --depth=1 --no-repo-verify -u git://github.com/ResurrectionRemix/platform_manifest.git -b Q -g default,-device,-mips,-darwin,-notdefault
-git clone https://github.com/cbendot/Local-Manifests.git --depth 1 -b RR .repo/local_manifests
+git clone https://github.com/xoo2001/local_manifest.git --depth 1 -b rr-hot10 .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
 source build/envsetup.sh
-lunch rr_X00TD-userdebug
-export TZ=Asia/Jakarta #put before last build command
+export USE_GAPPS=true
+lunch rr_hot10-userdebug
+export TZ=Asia/Jakarta
 mka bacon
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
