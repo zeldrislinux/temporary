@@ -7,6 +7,8 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 source build/envsetup.sh
 lunch lineage_vince-eng
 export SELINUX_IGNORE_NEVERALLOWS=true
+export BUILD_USERNAME=rxhul
+export BUILD_HOSTNAME=android-ci
 export CIPHER_MAINTAINER=r_k87
 export CIPHER_GAPPS=false
 export TARGET_FACE_UNLOCK_SUPPORTED=true
