@@ -7,6 +7,8 @@ source build/envsetup.sh
 lunch cafex_lavender-userdebug
 export SELINUX_IGNORE_NEVERALLOWS=true
 export TZ=Asia/Kolkata #put before last build command
+export KBUILD_BUILD_USER=wHoEMi
+export KBUILD_BUILD_HOST=ehtesham
 m cafex
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
