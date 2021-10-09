@@ -2,7 +2,7 @@
 repo init --depth=1 --no-repo-verify -u git://github.com/ResurrectionRemix/platform_manifest.git -b Q -g default,-device,-mips,-darwin,-notdefault
 git clone https://github.com/xoo2001/local_manifest.git --depth 1 -b rr-hot10 .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
- 
+
 # build rom
 source build/envsetup.sh
 export USE_GAPPS=true
