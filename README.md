@@ -7,7 +7,7 @@ AospExtended [Custom ROM](https://beebom.com/best-custom-roms-android-phones/) f
 77Mio/27or Video](https://www.youtube.com/wachv=KuQ9jIVmOXY)
 Distributed [here](https://t.me/rn4donloads4885)
 Estimated installation no.: 150
-How to use this re
+How to use this r
 ---------------
 * [Instructions if you want toelop AospEtended custom ROM as a developer](https://github.com/Apon77/mido-AospExtended-Apon77/blob/main/Instructions%20for%20developers.md)
 * [nstructions if you want to use AospExtended custom ROM in your device as a user](https://github.com/Apon77/mido-AospExtended-Apon77/blob/main/Instructions%20for%20users.md
