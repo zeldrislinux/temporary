@@ -5,7 +5,6 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 # build rom
 . build/envsetup.sh
-WITH_GAPPS=true
 lunch nad_RMX2185-userdebug
 mka nad
 
