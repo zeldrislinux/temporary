@@ -9,7 +9,6 @@ lunch nad_rova-userdebug
 export TZ=Asia/Jakarta
 export KBUILD_BUILD_USER=ItoRenz
 export KBUILD_BUILD_HOST=Tempest
-export ALLOW_MISSING_DEPENDENCIES=true
 mka nad
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
