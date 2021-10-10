@@ -1,7 +1,7 @@
 # sync rom
-repo init -u git://github.com/DotOS/manifest.git -b dot11
+repo init --depth=1 --no-repo-verify -u git://github.com/DotOS/manifest.git -b dot11 -g default,-device,-mips,-darwin,-notdefault
 git clone https://github.com/xoo2001/local_manifest.git --depth 1 -b dot-11 .repo/local_manifests
-repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
+repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
 source build/envsetup.sh
