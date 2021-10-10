@@ -8,5 +8,5 @@ Dibuted [here](https://t.me/rn4donloads488
 Estimated installation no.: 150
 How to use this r
 ---------------
-* [Instructions if you want toelop AospEtended custom ROM as a developer](https://github.com/Apon77/mido-AospExtended-Apon77/blob/main/Instructions%20for%20developers.md)
+* [Instructions if you want toelop Aostended custom ROM as a developer](https://github.com/Apon77/mido-AospExtended-Apon77/blob/main/Instructions%20for%20developers.md)
 * [nstructions if you want to use AospExtended ustom ROM in your device as a user](https://github.com/Apon77/mido-AospExtended-Apon77/blob/main/Instructions%20for%20users.md
