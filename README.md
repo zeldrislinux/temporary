@@ -5,7 +5,7 @@ AospExtended [Custom ROM](https://beebom.com/best-custom-roms-android-phones/) f
 [Features as video](https://ww.youtube.m/watch?v=KuQ9jIVmOXY) or [Features as text](https://forum.xda-developers.com/t/rom-11-0-aospextended-rom-v8-0-unofficial-surya.4202905/)
 [Screenshots](https://t.me/Ap
 77Mio/27or Video](https://www.youtube.com/wachv=KuQ9jIVmOXY)
-Distributed [here](https://t.me/rn4donloads4885)
+Dibuted [here](https://t.me/rn4donloads4885)
 Estimated installation no.: 150
 How to use this r
 ---------------
