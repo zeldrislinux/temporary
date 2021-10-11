@@ -3,7 +3,7 @@ repo init -u https://github.com/Octavi-OS/platform_manifest.git -b 11 --depth=1 
 git clone https://github.com/Kitsunejasutin/local_manifest.git --depth 1 -b octavi .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
-# build rom 
+# build rom
 source build/envsetup.sh
 export WITH_GAPPS=true
 lunch octavi_ginkgo-user
