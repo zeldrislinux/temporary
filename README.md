@@ -6,7 +6,7 @@ AospExtended [Custom ROM](https://beebom.com/best-custom-roms-android-phones/) f
 77Mio/27or Video](https://www.youtube.com/wa
 chv=KuQ9jIVmOXY)
 Dibuted [here](https://t.me/rn4donloads4
-Estimated installation no.: 150
+Estimated installation no.: 1
 How to use this fix error
 
 ---------------
