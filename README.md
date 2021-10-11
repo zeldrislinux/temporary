@@ -10,5 +10,5 @@ Estimated installation no.: 1
 How to use this fix error
 
 ---------------
-* [Instructions if you want toelop Aosteded custom ROM as a developer](https://github.com/Apon77/mido-AospExtended-Apon77/blob/main/Instructions%20for%20developers.md)
+* [Instructions if you want toelop Aoseded custom ROM as a developer](https://github.com/Apon77/mido-AospExtended-Apon77/blob/main/Instructions%20for%20developers.md)
 * [nstructions if you want to use AospExtended  ROM in your device as a user](https://github.com/Apon77/mido-AospExtended-Apon77/blob/main/Instructions%20for%20users.m
