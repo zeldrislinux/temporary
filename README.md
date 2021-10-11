@@ -7,7 +7,7 @@ AospExtended [Custom ROM](https://beebom.com/best-custom-roms-android-phones/) f
 chv=KuQ9jIVmOXY)
 Dibuted[here](https://t.me/rn4donloads4
 Estimated installation no.: 1
-How to use this fix error
+How to use this fix erro
 
 ---------------
 * [Instructions if you want toelop Aoseded custom ROM as a developer](https://github.com/Apon77/mido-AospExtended-Apon77/blob/main/Instructions%20for%20developers.md)
