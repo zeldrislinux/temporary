@@ -1,5 +1,5 @@
 # sync rom
-repo init --depth=1 --no-repo-verify -u https://android.googlesource.com/platform/manifest -b android-12.0.0_r2 -g default,-device,-mips,-darwin,-notdefault
+repo init --depth=1 --no-repo-verify -u https://github.com/AOSPMinimal/platform_manifest -b aosp-12 -g default,-device,-mips,-darwin,-notdefault
 git clone https://GitHub.com/flashokillerify/manifest_pine --depth 1 -b A12 .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
