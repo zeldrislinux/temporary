@@ -5,7 +5,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 # build rom
 . build/envsetup.sh
-lunch xdroid_r5x-userdebug
+lunch xdroid_r5x-eng
 export TZ=Asia/Jakarta
 make xd
 
