@@ -6,6 +6,8 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 # build rom
 . build/envsetup.sh
 lunch banana_ginkgo-userdebug
+export BUILD_USERNAME=enn
+export BUILD_HOSTNAME=enprytna
 export TZ=Asia/Jakarta #put before last build command
 make banana
 
