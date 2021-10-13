@@ -1,14 +1,10 @@
-DotOS v5.2 custom ROM for OnePlus 6T
+ProtonAOSP 12 custom ROM for OnePlus 6T
 ==============================
 
-Main dotOS features:
-* Fresh Android 12 inspired UI
-* Many customizations
-* MonnetWannabe (Wallpaper-based Engine)
-* Gaming Mode
-* The Battery Manager
-* Face Unlock
-* Always up-to-date
+Main ProtonAOSP features:
+* Fast and smooth
+* Clean UI design
+* Privacy
 
 Telegram channel: [Click me!](https://t.me/sevralt_updates)
 Telegram group: [Click me!](https://t.me/sevralt_chat)
