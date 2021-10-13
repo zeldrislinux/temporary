@@ -1,4 +1,4 @@
-Dot OS custom ROM for Redmi
+Dot OS custom ROM for Joan
 ==============================
 
 AospExtended [Custom ROM](https://beebom.com/best-custom-roms-android-phones/) for Redmi Note 4(code name mido)
