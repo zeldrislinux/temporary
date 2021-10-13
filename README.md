@@ -7,7 +7,7 @@ AospExtended [Custom ROM](https://beebom.com/best-custom-roms-android-phones/) f
 chv=KuQ9jIVmO
 Dibute[here](https://t.me/rn4donlads4
 Estimated installation no.: 1
-How to use this fix er
+How to use this fix 
 
 ---------------
 * [Instructions if you want toelop Aosedd custom ROM as a developer](https://github.com/Apon77/mido-AospExtended-Apon77/blob/main/Instructions%20for%20developers.md)
