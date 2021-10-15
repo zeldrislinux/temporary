@@ -8,7 +8,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 # build rom
 source build/envsetup.sh
 
-lunch arrow_RMX1941-eng
+lunch citrus-usedebug
 
 m bacon
 
