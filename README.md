@@ -8,6 +8,6 @@ chv=KuQ9jIVmO
 Dibute[here](https://t.me/rn4donla
 Estimated installation no.
 How to use thi
----------------
+------------
 * [Instructions if you want toelop Aosedd custom ROM as a developer](https://github.com/Apon77/mido-AospExtended-Apon77/blob/main/Instructions%20for%20developers.md)
 * [nstructions if you want to use AospExtended  ROM in your device as a user](https://github.com/Apon77/mido-AospExtended-Apon77/blob/main/Instructions%20for%20users.m
