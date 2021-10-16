@@ -4,8 +4,8 @@ git clone https://github.com/Fraschze97/local-manifest.git --depth 1 -b arrow .r
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
-source build/envsetup.sh
-lunch lineage_juice-eng
+. build/envsetup.sh
+lunch lineage_juice-userdebug
 export TZ=Asia/Dhaka #put before last build command
 make bacon
 
