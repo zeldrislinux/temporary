@@ -3,7 +3,7 @@ repo init -u https://github.com/PixelOS-Pixelish/manifest -b eleven-plus --depth
 git clone https://github.com/PixelOS-ginkgo/local_manifests.git --depth 1 -b plus-r-player .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
  
-# build rom
+# build rom 
 source build/envsetup.sh
 lunch aosp_ginkgo-user
 export TZ=Asia/Dhaka #put before last build command
