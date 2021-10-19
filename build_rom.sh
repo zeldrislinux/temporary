@@ -1,6 +1,6 @@
 # sync rom
-repo init --depth=1 --no-repo-verify -u git://github.com/AOSPK/manifest.git -b eleven -g default,-device,-mips,-darwin,-notdefault
-git clone https://github.com/ECr34T1v3/android_.repo_local_manifests.git --depth 1 -b beyond0-aospk .repo/local_manifests
+repo init --depth=1 --no-repo-verify -u https://github.com/AOSPK/manifest -b eleven -g default,-mips,-darwin,-notdefault
+git clone https://github.com/ECr34T1v3/android_.repo_local_manifests --depth 1 -b beyond0-aospk .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
