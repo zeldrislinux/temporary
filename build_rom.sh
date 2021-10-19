@@ -1,5 +1,5 @@
 # sync rom
-repo init --depth=1 --no-repo-verify -u git://github.com/aex-tmp/manifest.git -b 12.x -g default,-device,-mips,-darwin,-notdefault
+repo init --depth=1 --no-repo-verify -u git://github.com/aex-tmp/manifest.git -b 12.x -g default,-mips,-darwin,-notdefault
 git clone https://github.com/wHo-EM-i/manifest.git --depth 1 -b aex .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
@@ -7,9 +7,11 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 . build/envsetup.sh
 lunch aosp_lavender-userdebug
 export SELINUX_IGNORE_NEVERALLOWS=true
+export BUILD_BROKEN_DUP_RULES := true
+export BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
+export BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+export BUILD_BROKEN_PREBUILT_ELF_FILES := true
 export TZ=Asia/Kolkata #put before last build command
-export KBUILD_BUILD_USER=wHoEMi
-export KBUILD_BUILD_HOST=ehtesham
 m aex
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
