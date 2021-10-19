@@ -5,6 +5,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 # build rom
 source build/envsetup.sh
+repopick 14770
 lunch arrow_tulip-userdebug
 export TZ=Asia/Kolkata #put before last build command
 m bacon
