@@ -7,10 +7,6 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 . build/envsetup.sh
 lunch aosp_lavender-userdebug
 export SELINUX_IGNORE_NEVERALLOWS=true
-export BUILD_BROKEN_DUP_RULES := true
-export BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
-export BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
-export BUILD_BROKEN_PREBUILT_ELF_FILES := true
 export TZ=Asia/Kolkata #put before last build command
 m aex
 
