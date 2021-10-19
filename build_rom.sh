@@ -6,7 +6,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 # build rom
 source build/envsetup.sh
 lunch palladium_ginkgo-userdebug
-export PALLADIUM_BUILD_VARIANT := GAPPS
+export PALLADIUM_BUILD_VARIANT=GAPPS
 export TZ=Asia/Jakarta #put before last build command
 mka palladium
 
