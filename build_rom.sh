@@ -7,7 +7,9 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 source build/envsetup.sh
 repopick 14770
 repopick -t twelve-sepol
+repopick -t twelve-monet
 lunch arrow_tulip-userdebug
+export ARROW_GAPPS=true
 export TZ=Asia/Kolkata #put before last build command
 m bacon
 
