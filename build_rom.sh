@@ -5,6 +5,9 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 # build rom
 source build/envsetup.sh
+repopick 14770
+repopick -t twelve-sepol
+repopick -t twelve-monet
 lunch arrow_olives-userdebug
 export TZ=Asia/Jakarta #put before last build command
 m bacon
