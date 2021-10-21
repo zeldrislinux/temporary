@@ -1,2 +1,2 @@
-Havoc OS for Redmi 7 (onclite)
+Lineage OS for Redmi 7 (onclite)
 ================================
