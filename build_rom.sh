@@ -8,7 +8,7 @@ source build/envsetup.sh
 export TZ=Asia/Kolkata
 export KBUILD_BUILD_USER=aryan
 export KBUILD_BUILD_HOST=aryankaran
-export WITH_GAPPS=true
+export WITH_GAPPS=false
 brunch havoc_onclite-user
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
