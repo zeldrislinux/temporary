@@ -10,4 +10,5 @@ export TZ=Asia/Dhaka #put before last build command
 mka spark
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
-curl -sL https://git.io/file-transfer | sh && ./transfer wet out/target/product/olives/Spark*.zip
+curl -sL https://git.io/file-transfer | sh 
+./transfer wet out/target/product/olives/Spark*.zip
