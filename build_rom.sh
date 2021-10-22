@@ -3,7 +3,7 @@ repo init --depth=1 --no-repo-verify -u git://github.com/LineageOS/android.git -
 git clone https://github.com/aryankaran/local_manifests.git --depth 1 -b LineageOS .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
-# Build Rom
+#  Build Rom
 source build/envsetup.sh
 export TZ=Asia/Kolkata
 export KBUILD_BUILD_USER=aryan
