@@ -4,9 +4,9 @@ git clone https://github.com/Dev0786s/local-manifest.git --depth 1 -b main .repo
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
-source build/envsetup.sh
+. build/envsetup.sh
 lunch aosp_merlinx-user
-export TZ=Asia/Dhaka #put before last build command
+export TZ=Asia/Dhaka #put before last build commands
 mka bacon
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
