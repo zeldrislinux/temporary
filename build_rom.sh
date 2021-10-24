@@ -5,7 +5,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 # build rom
 . build/envsetup.sh
-lunch aosp_surya-userdebug
+lunch aosp_surya-user
 export TZ=Asia/Singapore #put before last build command
 mka bacon
 
