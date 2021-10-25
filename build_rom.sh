@@ -8,7 +8,7 @@ source build/envsetup.sh
 export TZ=Asia/Kolkata
 export KBUILD_BUILD_USER=aryan
 export KBUILD_BUILD_HOST=aryankaran
-nkdir -p /home/cirrus/roms/CherishOS-Tmp/out/target/product/onclite/obj/PACKAGING/depmod_vendor_intermediates/lib/modules/0.0
+mkdir -p /home/cirrus/roms/CherishOS-Tmp/out/target/product/onclite/obj/PACKAGING/depmod_vendor_intermediates/lib/modules/0.0
 touch /home/cirrus/roms/CherishOS-Tmp/out/target/product/onclite/obj/PACKAGING/depmod_vendor_intermediates/lib/modules/0.0/modules.order
 touch /home/cirrus/roms/CherishOS-Tmp/out/target/product/onclite/obj/PACKAGING/depmod_vendor_intermediates/lib/modules/0.0/modules.builtin
 brunch onclite
