@@ -8,7 +8,7 @@ source build/envsetup.sh
 export KBUILD_BUILD_USER=aryan
 export KBUILD_BUILD_HOST=aryankaran
 export TZ=Asia/Kolkata
-lunch evolution_onclite-user
+lunch evolution_onclite-userdebug
 m
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
