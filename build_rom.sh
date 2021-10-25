@@ -4,6 +4,17 @@ git clone https://github.com/hsx02/Local-Manifests.git --depth 1 -b common .repo
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
+repopick -t
+twelve-monet-zcam
+twelve-sepol
+twelve-qs
+twelve-misc-stuff
+twelve-ppu
+
+repopick
+15063
+14770
+
 . build/envsetup.sh
 lunch arrow_pine-userdebug
 export SELINUX_IGNORE_NEVERALLOWS=true
