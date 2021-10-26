@@ -6,12 +6,6 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 # build rom
 . build/envsetup.sh
 lunch arrow_pine-userdebug
-repopick -t twelve-misc-stuff 
-repopick -t twelve-sepol
-repopick -t twelve-qs
-repopick -t twelve-ppu
-repopick 15063
-repopick 14770
 export SELINUX_IGNORE_NEVERALLOWS=true
 export TZ=Asia/Dhaka #put before last build command
 m bacon
