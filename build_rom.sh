@@ -10,7 +10,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 . build/envsetup.sh 
 
-lunch corvus_merlinx-user
+lunch corvus_merlinx-userdebug
 
 export ALLOW_MISSING_DEPENDENCIES=true 
 
