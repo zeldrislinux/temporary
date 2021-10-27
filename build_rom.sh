@@ -5,7 +5,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 # build rom
 source build/envsetup.sh
-lunch p404_Z01R-eng
+lunch p404_Z01R-userdebug
 export SELINUX_IGNORE_NEVERALLOWS=true
 export TZ=Asia/Kolkata 
 make bacon
