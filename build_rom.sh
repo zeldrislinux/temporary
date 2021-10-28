@@ -5,8 +5,6 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 # Build  rom
 source build/envsetup.sh
-export KBUILD_BUILD_USER=aryan
-export KBUILD_BUILD_HOST=aryankaran
 export TZ=Asia/Kolkata
 lunch evolution_onclite-userdebug
 m
