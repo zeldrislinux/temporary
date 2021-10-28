@@ -1,4 +1,4 @@
 Evolution X for Xiaomi Redmi 7
 ==============================
 
-By - Aryan Karan @aryan-karan
+By - Aryan Karan @aryankaran
