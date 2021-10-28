@@ -3,6 +3,7 @@ repo init --depth=1 --no-repo-verify -u git://github.com/aex-tmp/manifest.git -b
 git clone https://github.com/AbrarNoob/local_manifest.git --depth 1 -b aex .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
+
 # build rom
 source build/envsetup.sh
 export BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
