@@ -6,6 +6,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 # build rom
 source build/envsetup.sh
 lunch aosp_ginkgo-userdebug
+export PRODUCT_BROKEN_VERIFY_USES_LIBRARIES := true
 export WITH_GAPPS=true
 export TZ=Asia/Daka #put before last build command
 m aex
