@@ -1,12 +1,12 @@
 # sync rom
-repo init --depth=1 --no-repo-verify -u https://github.com/PixelOS-Pixelish/manifest -b eleven-plus -g default,-device,-mips,-darwin,-notdefault
-git clone https://github.com/Dannoob/local_manifests.git --depth 1 -b plus-ulysse .repo/local_manifests
+repo init --depth=1 --no-repo-verify -u https://github.com/PixelOS-Pixelish/manifest -b twelve -g default,-device,-mips,-darwin,-notdefault
+git clone https://github.com/Dannoob/local_manifests.git --depth 1 -b twelve-ulysse .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom 
 source build/envsetup.sh
-lunch aosp_ulysse-user
-export TZ=Asia/Malaysia #put before last build command
+lunch aosp_ulysse-eng
+export TZ=Asia/Kuala Lumpur #put before last build command
 mka bacon
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
