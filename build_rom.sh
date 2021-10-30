@@ -6,7 +6,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 # Build rom
 source build/envsetup.sh
 export TZ=Asia/Kolkata
-lunch evolution_onclite-userdebug
+lunch evolution_onclite-eng
 mka evolution
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
