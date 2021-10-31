@@ -3,7 +3,7 @@ repo init --depth=1 --no-repo-verify -u https://github.com/Project-Fluid/manifes
 git clone https://github.com/WalkingProjekt-juice/manifest.git --depth 1 -b FluidOS .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
-# Build ROMs
+# Build ROM
 source build/envsetup.sh
 lunch fluid_juice-userdebug
 export TZ=Asia/Kolkata
