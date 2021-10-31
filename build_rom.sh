@@ -6,7 +6,7 @@ git clone https://github.com/ASHISH11948/local_manifest.git --depth 1 -b ashish 
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
-. build/envsetup.sh
+. build/envsetup
 lunch aosp_olivewood-userdebug
 export TZ=Asia/Dhaka #put before last build command
 make bacon
