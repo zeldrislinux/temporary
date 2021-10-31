@@ -3,7 +3,6 @@ export git config --global user.name ASHISH11948
 export git config --global user.email jaswalashish48.com
 repo init --depth=1 --no-repo-verify -u https://github.com/LessAosp/manifest.git -b twelve -g default,-mips,-darwin,-notdefault
 git clone https://github.com/ASHISH11948/local_manifest.git --depth 1 -b ashish .repo/local_manifests
-git clone https://github.com/shield44-project/arrow_hardwade_qcom-caf-msm8996-R hardware/qcom-caf/msm8996-R
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
