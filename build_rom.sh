@@ -8,7 +8,6 @@ source build/envsetup.sh
 lunch aosp_pine-user
 export PRODUCT_BROKEN_VERIFY_USES_LIBRARIES=true
 export ALLOW_MISSING_DEPENDENCIES=true
-export SELINUX_IGNORE_NEVERALLOWS=true
 export TZ=Asia/Dhaka #put before last build command
 m aex
 
