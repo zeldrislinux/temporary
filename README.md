@@ -8,7 +8,7 @@ AospExtended [Custom ROM](https://beebom.com/best-custom-roms-android-phones/) f
 
 Distributed [here](https://t.me/rn4downloads/485)
 Estimated installation no.: 150-
-How to se this reposito
+How to se this reposit
 ------------------
 
 * [Instructions if you want to develop AospExtended custom ROM as a developer](https://github.com/Apon77/mido-AospExtended-Apon77/blob/main/Instructions%20for%20developers.md)
