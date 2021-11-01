@@ -2,7 +2,7 @@
 set -e
 
 init_check=$(grep 'repo init' $CIRRUS_WORKING_DIR/build_rom.sh | grep 'depth=1')
-if [[ $init_check != *default,-device,-mips,-darwin,-notdefault* ]]; then echo Please use --depth=1 and -g default,-device,-mips,-darwin,-notdefault tags in repo init line.; exit 1; fi
+if [[ $init_check != *default,-mips,-darwin,-notdefault* ]]; then echo Please use --depth=1 and -g default,-mips,-darwin,-notdefault tags in repo init line.; exit 1; fi
 
 clone_check=$(grep 'git clone' $CIRRUS_WORKING_DIR/build_rom.sh | wc -l)
 if [[ $clone_check -gt 1 ]]; then echo Please use local manifest to clone trees and other repositories, we dont allow git clone to clone trees.; exit 1; fi
@@ -15,6 +15,12 @@ if [[ $sudo_check -gt 0 ]]; then echo Please dont use sudo inside script.; exit 
 
 mv_check=$(grep 'mv ' $CIRRUS_WORKING_DIR/build_rom.sh | wc -l)
 if [[ $mv_check -gt 0 ]]; then echo Please dont use mv inside script, use local manifest for this purpose.; exit 1; fi
+
+sed_check=$(grep 'sed ' $CIRRUS_WORKING_DIR/build_rom.sh | wc -l)
+if [[ $sed_check -gt 0 ]]; then echo Please dont use sed inside script, use local manifest for this purpose.; exit 1; fi
+
+tee_check=$(grep 'tee ' $CIRRUS_WORKING_DIR/build_rom.sh | wc -l)
+if [[ $tee_check -gt 0 ]]; then echo Please dont use tee inside script, its not needed at all..; exit 1; fi
 
 clean_check=$(grep ' clean' $CIRRUS_WORKING_DIR/build_rom.sh | wc -l)
 if [[ $clean_check -gt 0 ]]; then echo Please dont use make clean. Server does make installclean by default, which is enough for most of the cases.; exit 1; fi
@@ -51,6 +57,9 @@ if [[ $sync_check != *$sync_string* ]]; then echo Please follow repo sync line o
 fetch_check=$(grep 'git fetch ' $CIRRUS_WORKING_DIR/build_rom.sh | wc -l)
 if [[ $fetch_check -gt 0 ]]; then echo Please dont use fetch inside script, use local manifest for this purpose.; exit 1; fi
 
+pick_check=$(grep 'repopick ' $CIRRUS_WORKING_DIR/build_rom.sh | wc -l)
+if [[ $pick_check -gt 0 ]]; then echo Please dont use repopick inside script, use local manifest for this purpose.; exit 1; fi
+
 cd_check=$(grep "cd *" $CIRRUS_WORKING_DIR/build_rom.sh | wc -l)
 if [[ $cd_check -gt 0 ]]; then echo Please dont use cd inside script, use local manifest for this purpose.; exit 1; fi
 
@@ -61,10 +70,22 @@ rom_name=$(grep init $CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d / -f 4)
 branch_name=$(grep init $CIRRUS_WORKING_DIR/build_rom.sh | awk -F "-b " '{print $2}' | awk '{print $1}')
 if [[ $rom_name == LineageOS ]]; then if [[ $branch_name == lineage-17.1 ]]; then rom_name=$rom_name-$branch_name; fi ;fi
 if [[ $rom_name == LineageOS ]]; then if [[ $branch_name == lineage-15.1 ]]; then rom_name=$rom_name-$branch_name; fi ;fi
+if [[ $rom_name == LineageOS ]]; then if [[ $branch_name == lineage-19.0 ]]; then rom_name=$rom_name-$branch_name; fi ;fi
+if [[ $rom_name == ArrowOS ]]; then if [[ $branch_name == arrow-12.0 ]]; then rom_name=$rom_name-$branch_name; fi ;fi
+if [[ $rom_name == Project-Fluid ]]; then if [[ $branch_name == fluid-12 ]]; then rom_name=$rom_name-$branch_name; fi ;fi
+if [[ $rom_name == CipherOS ]]; then if [[ $branch_name == twelve ]]; then rom_name=$rom_name-$branch_name; fi ;fi
+if [[ $rom_name == ProjectRadiant ]]; then if [[ $branch_name == twelve ]]; then rom_name=$rom_name-$branch_name; fi ;fi
+if [[ $rom_name == Project-Awaken ]]; then if [[ $branch_name == '12' ]]; then rom_name=$rom_name-$branch_name; fi ;fi
+if [[ $rom_name == Octavi-OS ]]; then if [[ $branch_name == '12' ]]; then rom_name=$rom_name-$branch_name; fi ;fi
+if [[ $rom_name == Project-LegionOS ]]; then if [[ $branch_name == '12' ]]; then rom_name=$rom_name-$branch_name; fi ;fi
+if [[ $rom_name == ShapeShiftOS ]]; then if [[ $branch_name == 'android_12' ]]; then rom_name=$rom_name-$branch_name; fi ;fi
+if [[ $rom_name == lighthouse-os ]]; then if [[ $branch_name == 'sailboat' ]]; then rom_name=$rom_name-$branch_name; fi ;fi
+
 if [[ $rom_name == LineageOS ]]; then if [[ $branch_name == lineage-16.1 ]]; then echo Only lineage-18.1, 17.1 and 15.1 is supported.; exit 1; fi ;fi
 if [[ $rom_name == LineageOS ]]; then if [[ $branch_name == lineage-16.0 ]]; then echo Only lineage-18.1, 17.1 and 15.1 is supported.; exit 1; fi ;fi
 if [[ $rom_name == LineageOS ]]; then if [[ $branch_name == lineage-15.0 ]]; then echo Only lineage-18.1, 17.1 and 15.1 is supported.; exit 1; fi ;fi
-if [[ $rom_name == NusantaraProject-ROM ]]; then if [[ $branch_name == '10' ]]; then echo Only nusantara a11 is supported.; exit 1; fi ;fi
+if [[ $rom_name == NusantaraProject-ROM ]]; then if [[ $branch_name != '11' ]]; then echo Only NusantaraProject-ROM a11 is supported.; exit 1; fi ;fi
+if [[ $rom_name == ArrowOS ]]; then if [[ $branch_name == 'arrow-10.0' ]]; then echo Only ArrowOS a11 and a12 is supported.; exit 1; fi ;fi
 device=$(grep unch $CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d ' ' -f 2 | cut -d _ -f 2 | cut -d - -f 1)
 grep _jasmine_sprout $CIRRUS_WORKING_DIR/build_rom.sh > /dev/null && device=jasmine_sprout
 
@@ -74,7 +95,7 @@ if [[ $BRANCH == *pull/* ]]; then
 cd /tmp/cirrus-ci-build
 PR_NUM=$(echo $BRANCH|awk -F '/' '{print $2}')
 AUTHOR=$(gh pr view $PR_NUM|grep author| awk '{print $2}')
-for value in ajitlenka30 basic-general ZunayedDihan Badroel07 Ravithakral SumonSN SevralT yograjsingh-cmd nit-in
+for value in ajitlenka30 basic-general ZunayedDihan Badroel07 Ravithakral SumonSN SevralT yograjsingh-cmd nit-in Sanjeev stunner ini23 CyberTechWorld
 do
     if [[ $AUTHOR == $value ]]; then
     echo Please check \#pr instruction in telegram group.; exit 1; fi
@@ -83,7 +104,7 @@ fi
 
 if [[ $CIRRUS_USER_PERMISSION == write ]]; then
 if [ -z "$CIRRUS_PR" ]; then echo fine; else
-echo You are push user. Please follow pinned message in push group.; exit 1
+echo You are push user. Don\'t do pr and please follow pinned message in push group.; exit 1
 fi
 fi
 
