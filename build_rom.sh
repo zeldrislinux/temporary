@@ -5,6 +5,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 # build rom
 . build/envsetup.sh
+export ALLOW_MISSING_DEPENDENCIES=true
 lunch aosp_RMX2001-eng
 export TZ=Asia/Jakarta #put before last build command
 mka bacon
