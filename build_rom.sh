@@ -1,12 +1,12 @@
 # sync rom
-repo init --depth=1 --no-repo-verify -u https://github.com/dotos-next/manifest -b dot12 -g default,-mips,-darwin,-notdefault
+repo init --depth=1 --no-repo-verify -u https://github.com/DotOS/manifest -b dot11 -g default,-mips,-darwin,-notdefault
 git clone https://github.com/P-Salik/local_manifest --depth 1 -b DotOS .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
 source build/envsetup.sh
 lunch dot_RMX1941-userdebug
-export TZ=Asia/Dhaka #put before last build command
+export TZ=Asia/Kolkata #put before last build command
 make bacon
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
