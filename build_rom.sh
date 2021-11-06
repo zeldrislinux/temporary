@@ -1,11 +1,13 @@
 # sync rom
-repo init --depth=1 --no-repo-verify -u git://github.com/ResurrectionRemix/platform_manifest.git -b Q -g default,-device,-mips,-darwin,-notdefault
-git clone https://github.com/N4veenNK/local-manifest.git --depth 1 -b RR .repo/local_manifests
+repo init --depth=1 --no-repo-verify -u git://github.com/ResurrectionRemix/platform_manifest.git -b Q -g default,-mips,-darwin,-notdefault
+git clone https://github.com/Fraschze97/local_manifest --depth 1 -b los2 .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
 . build/envsetup.sh
-lunch rr_X00TD-userdebug
+lunch rr_RMX2185-userdebug
+export ALLOW_MISSING_DEPENDENCIES=true
+export SELINUX_IGNORE_NEVERALLOWS=true
 export TZ=Asia/Kolkata #put before last build command
 mka bacon
 
