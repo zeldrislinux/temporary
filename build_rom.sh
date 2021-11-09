@@ -6,8 +6,9 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 # build ro
 source build/envsetup.sh
 lunch evolution_juice-userdebug
-
-export TZ=Asia/Dhaka
+export TZ=Europe/Samara
+export KBUILD_BUILD_USER=WalkingDead
+export KBUILD_BUILD_HOST=WalkingCI
 make evolution
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
