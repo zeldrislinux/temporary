@@ -7,7 +7,6 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 source build/envsetup.sh
 lunch evolution_juice-userdebug
 
-
 export TZ=Asia/Dhaka
 make evolution
 
