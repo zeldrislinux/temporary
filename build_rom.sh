@@ -6,6 +6,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 # build rom
 source build/envsetup.sh
 lunch aosp_tissot-userdebug
+export PRODUCT_BROKEN_VERIFY_USES_LIBRARIES=true
 export TZ=Asia/Kolkata #put before last build command
 m aex
 
