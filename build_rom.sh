@@ -8,7 +8,7 @@ source build/envsetup.sh
 lunch aosp_ginkgo-userdebug
 export PRODUCT_BROKEN_VERIFY_USES_LIBRARIES=true
 export RELAX_USES_LIBRARY_CHECK=true
-export VANILLA_BUILD=true
+export WITH_GAPPS=true
 export TZ=Asia/jakarta #put before last build command
 m aex
 
