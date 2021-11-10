@@ -9,7 +9,7 @@ lunch aosp_ginkgo-userdebug
 export PRODUCT_BROKEN_VERIFY_USES_LIBRARIES=true
 export RELAX_USES_LIBRARY_CHECK=true
 export VANILLA_BUILD=true
-export TZ=Asia/Surabaya #put before last build command
+export TZ=Asia/Jakarta #put before last build command
 m aex
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
