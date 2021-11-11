@@ -5,7 +5,6 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 # build rom
 . build/envsetup.sh
-rm -rf hardware/qcom-caf/msm8996/display
 lunch aosp_pine-userdebug
 export TZ=Asia/Dhaka #put before last build command
 mka bacon
