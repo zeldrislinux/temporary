@@ -1,10 +1,11 @@
 # sync rom
-repo init --depth=1 --no-repo-verify -u git://github.com/hsx02/manifest.git -b snow  -g default,-mips,-darwin,-notdefault
-git clone https://github.com/hsx02/Local-Manifests.git --depth 1 -b pe-12 .repo/local_manifests
+repo init --depth=1 --no-repo-verify -u git://github.com/Project-Elixir/manifest.git -b snow  -g default,-mips,-darwin,-notdefault
+git clone https://github.com/hsx02/Local-Manifests.git --depth 1 -b elix-12 .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
 . build/envsetup.sh
+rm -rf hardware/qcom-caf/msm8996/display
 lunch aosp_pine-userdebug
 export TZ=Asia/Dhaka #put before last build command
 mka bacon
