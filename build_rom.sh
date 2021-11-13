@@ -7,6 +7,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 . build/envsetup.sh
 lunch arrow_platina-userdebug
 export SELINUX_IGNORE_NEVERALLOWS=true
+export ARROW_GAPPS=true
 export SKIP_API_CHECK=true
 export SKIP_ABI_CHECK=true
 export TZ=Asia/Jakarta #put before last build command
