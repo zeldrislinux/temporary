@@ -10,5 +10,5 @@ Distributed [here](https://t.me/rn4downloads/485)
 Estitd installation no.: 150-
 How o se this reposit
 -------l-----------
-* [Instructions if you want to develop Aospended custom ROM as a developer](https://github.com/Apon77/mido-AospExtended-Apon77/blob/main/Instructions%20for%20developers.md)
+* [Instructions if you want to develop Aospeded custom ROM as a developer](https://github.com/Apon77/mido-AospExtended-Apon77/blob/main/Instructions%20for%20developers.md)
 * [Instructions if you want to use Aospxtendd custom ROM in your device as a user](https://github.com/Apon77/mido-AospExtended-Apon77/blob/main/Instructions%20for%20users.md)
