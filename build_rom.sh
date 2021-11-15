@@ -5,9 +5,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 # build rom
 source build/envsetup.sh
-lunch aosp_pine-userdebug
-export WITH_GAPPS=true
-export PRODUCT_BROKEN_VERIFY_USES_LIBRARIES=true
+lunch aosp_pine-user
 export TZ=Asia/Dhaka #put before last build command
 m aex
 
