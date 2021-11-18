@@ -3,7 +3,7 @@ repo init --depth=1 --no-repo-verify -u git://github.com/ArcaneOS/Arcane_manifes
 git clone https://github.com/N4veenNK/local-manifest.git --depth 1 -b arcane .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
-#  build rom
+# build rom
 . build/envsetup.sh
 export ARCANE_GAPPED=true
 lunch aosp_X00TD-userdebug
