@@ -3,7 +3,7 @@ repo init --depth=1 --no-repo-verify -u git://github.com/LineageOS/android.git -
 git clone https://github.com/WalkingProjekt-juice/manifest --depth 1 -b los-18 .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
-# build ro
+# build rom
 source build/envsetup.sh
 lunch lineage_juice-userdebug
 export TZ=Europe/Samara
