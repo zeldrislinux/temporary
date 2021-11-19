@@ -4,9 +4,9 @@ git clone https://github.com/WalkingProjekt-juice/manifest --depth 1 -b los-18 .
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build ro
-. build/envsetup.sh
+source build/envsetup.sh
 lunch lineage_juice-userdebug
-export TZ=Asia/Dhaka
+export TZ=Europe/Samara
 make bacon
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
