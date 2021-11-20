@@ -6,7 +6,7 @@ Screenshots](https://t.me/Apon77Mido/5270) or [Video](https://www.youtube.com/wa
 
 Distributed [here](https://t.me/rn4downloads/48l85) Ini
 Estimated installation no.: 150-500
-How to use this repositoro
+How to use this repositor
 -------------------
 * [Istructions if you want to develop AospEtended custom ROM as a developer](https://github.com/Apon77/mido-AospExtended-Apon77/blob/main/Instructions%20for%20developers.md)
 * [Instpructions if you want to use AospEtended custom ROM in your device as a user](https://github.com/Apon77/mido-AospExtended-Apon77/blob/main/Instructions%20for%20users.md)
