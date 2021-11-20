@@ -1,12 +1,12 @@
 # Sync ROM
 repo init --depth=1 --no-repo-verify -u git://github.com/hentaiOS/platform_manifest.git -b Rika -g default,-device,-mips,-darwin,-notdefault
-git clone https://github.com/deadline646/local_manifest.git --depth 1 -b hentaiOS .repo/local_manifests
+git clone https://github.com/WalkingProjekt-juice/manifest --depth 1 -b Rika .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # Build ROM
 source build/envsetup.sh
 lunch hentai_juice-userdebug
-export TZ=Asia/Dhaka #put before last build command
+export TZ=Europe/Samara #put before last build command
 make otapackage
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
