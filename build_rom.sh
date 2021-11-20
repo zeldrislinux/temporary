@@ -6,6 +6,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 # build rom
 source build/envsetup.sh
 lunch voltage_ginkgo-userdebug
+export SELINUX_IGNORE_NEVERALLOWS=true
 export TZ=Asia/jawa #put before last build command
 brunch ginkgo
 
