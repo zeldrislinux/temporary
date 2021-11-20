@@ -4,7 +4,7 @@ git clone https://github.com/WalkingProjekt-juice/manifest --depth 1 -b Rika .re
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # Build ROM
-. build/envsetup.sh
+sourcebuild/envsetup.sh
 lunch hentai_juice-userdebug
 export TZ=Europe/Samara #put before last build command
 make otapackage
