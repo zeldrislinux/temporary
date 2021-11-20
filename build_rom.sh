@@ -7,7 +7,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 source build/envsetup.sh
 lunch voltage_ginkgo-userdebug
 export SELINUX_IGNORE_NEVERALLOWS=true
-export TZ=Asia/jawa #put before last build command
+export TZ=Asia/Jakarta #put before last build command
 brunch ginkgo
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
