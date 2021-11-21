@@ -8,7 +8,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 source build/envsetup.sh
 lunch revengeos_juice-userdebug
 export ALLOW_MISSING_DEPENDENCIES=true
-export TZ=Asia/Jakarta #put before last build command
+export TZ=Asia/Jakarta #put before last build commands
 make bacon
 
 
