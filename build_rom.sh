@@ -5,7 +5,6 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 #  lbuild rom
 source build/envsetup.sh
-# Build Try
 lunch rr_citrus-userdebug
 export TZ=Europe/Samara
 mka bacon
