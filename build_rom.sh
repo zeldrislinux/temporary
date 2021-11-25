@@ -6,6 +6,8 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 # build rom
 source build/envsetup.sh
 lunch revengeos_X00TD-user
+export BUILD_USERNAME=tiktodz
+export BUILD_HOSTNAME=nobody
 export TZ=Asia/Jakarta #put before last build command
 make bacon
 
