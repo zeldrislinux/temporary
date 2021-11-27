@@ -5,7 +5,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 # build rom
 source build/envsetup.sh
-lunch potato_tulip-userdebug
+lunch potato_tulip-user
 export WITH_GMS=true
 export TZ=Asia/Kolkata #put before last build command
 brunch tulip
