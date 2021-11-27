@@ -1,9 +1,7 @@
-dotOS 11 custom ROM for 10orG (Holland2)
+Pixel Experiance custom ROM for Redmi Note 6 pro (tulip)
 =========================================
 
-DotOS [Custom ROM](https://www.droidontime.com/) for 10orG (code name: Holland2)
-
-Distributed [here](https://t.me/downloads10orG/)
+Distributed [here](https://#/)
 
 Estimated installation no.: unknown :
 
