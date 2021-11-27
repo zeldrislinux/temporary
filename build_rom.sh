@@ -7,7 +7,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 source build/envsetup.sh
 lunch spark_ginkgo-user
 export WITH_GAPPS=true
-export TZ=Asia/Jakarta #put before last build command
+export TZ=Asia/jakarta #put before last build command
 mka spark
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line).
