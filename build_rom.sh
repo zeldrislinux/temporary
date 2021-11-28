@@ -7,7 +7,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 source build/envsetup.sh
 lunch dotfe_X00TD-userdebug
 export BUILD_USERNAME=tiktodz
-export BUILD_HOSTNAME=cirrus
+export BUILD_HOSTNAME=wizard
 export TZ=Asia/Jakarta #put before last build command
 make bacon
 
