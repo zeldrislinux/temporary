@@ -1,13 +1,13 @@
 # sync rom
 repo init --depth=1 --no-repo-verify -u https://github.com/CherishOS/android_manifest.git -b twelve -g default,-mips,-darwin,-notdefault
-git clone https://github.com/Yasundram/local_manifest --depth 1 -b cherish .repo/local_manifests
+git clone https://github.com/rasenss/manifest_local --depth 1 -b Aosp .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
 . build/envsetup.sh
-lunch cherish_RMX1941-eng
-export CHERISH_MAINTAINER=Sundram™
-export TZ=Asia/Dhaka #put before last build command
+lunch cherish_ginkgo-userdebug
+export WITH_GMS=true
+export TZ=Asia/Jakarta #put before last build command
 mka bacon
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
