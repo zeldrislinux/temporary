@@ -3,7 +3,7 @@ Pixel Experiance custom ROM for Redmi Note 6 pro (tulip)
 
 Distributed [here](https://#/)
 
-Estimated installation no.: unknown :
+Estimated installation no.: unknown.
 
 How to use this repository
 ---------------------------
