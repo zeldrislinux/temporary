@@ -6,6 +6,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 # build rom
 . build/envsetup.sh
 lunch cherish_ginkgo-userdebug
+export ALLOW_MISSING_DEPENDENCIES=true
 export WITH_GMS=true
 export TZ=Asia/Jakarta #put before last build command
 mka bacon
