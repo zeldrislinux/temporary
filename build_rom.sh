@@ -8,7 +8,7 @@ source build/envsetup.sh
 lunch dot_juice-userdebug
 export ALLOW_MISSING_DEPENDENCIES=true
 export WITH_GAPPS=true
-export TZ=Asia/Jakarta #TimeZone
+export TZ=Asia/Jakarta
 make bacon
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
