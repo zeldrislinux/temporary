@@ -6,7 +6,6 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 # build rom
 source build/envsetup.sh
 lunch rr_X00TD-userdebug
-SELINUX_IGNORE_NEVERALLOWS=true
 export BUILD_USERNAME=tom
 export BUILD_HOSTNAME=cirrus
 export TZ=Asia/Japan #put before last build command
