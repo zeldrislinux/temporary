@@ -1,19 +1,14 @@
 # sync rom 
-repo init --depth=1 --no-repo-verify -u git://github.com/CipherOS/android_manifest.git -b eleven -g default,-device,-mips,-darwin,-notdefault
+repo init --depth=1 --no-repo-verify -u git://github.com/CipherOS/android_manifest.git -b twelve -g default,-device,-mips,-darwin,-notdefault
 git clone https://github.com/rk134/local_manifests.git --depth 1 -b cipher .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
  
 # build rom
 source build/envsetup.sh
-lunch lineage_vince-eng
+lunch cipher_vince-eng
 export SELINUX_IGNORE_NEVERALLOWS=true
-export BUILD_USERNAME=rxhul
-export BUILD_HOSTNAME=android-ci
-export CIPHER_MAINTAINER=r_k87
 export CIPHER_GAPPS=false
-export TARGET_FACE_UNLOCK_SUPPORTED=true
 export TARGET_USES_BLUR=true
-export CIPHER_OFFICIAL=false
 export SKIP_ABI_CHECKS=true
 export SKIP_API_CHECKS=true
 export TZ=Asia/Dhaka #put before last build command
