@@ -6,6 +6,8 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 # build rom
 source build/envsetup.sh
 lunch legion_X00TD-userdebug
+export BUILD_USERNAME=kneba
+export BUILD_HOSTNAME=venom-carnage
 export ALLOW_MISSING_DEPENDENCIES=true
 export TZ=Asia/Tokyo #put before last build command
 make legion
