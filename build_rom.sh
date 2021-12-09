@@ -1,9 +1,9 @@
 # sync rom
 repo init --depth=1 --no-repo-verify -u git://github.com/StatiXOS/android_manifest.git -b 11 -g default,-mips,-darwin,-notdefault
-git clone https://github.com/sajidshahriar72543/local_manifest.git --depth 1 -b main .repo/local_manifests
+git clone https://github.com/sajidshahriar72543/local_manifest.git --depth 1 -b statix .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
-#5
+#6
 
 # build rom
 . build/envsetup.sh
