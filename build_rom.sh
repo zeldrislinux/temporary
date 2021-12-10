@@ -7,7 +7,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 source build/envsetup.sh
 export TARGET_GAPPS_ARCH=arm64
 lunch syberia_ginkgo-userdebug
-export TZ=Asia/Jakarta #put before last build comman
+export TZ=Asia/Jakarta #put before last build command
 mka bacon
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
