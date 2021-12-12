@@ -5,6 +5,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 # build rom
 source build/envsetup.sh
+export WITH_GMS=true
 lunch voltage_ginkgo-userdebug
 export TZ=Asia/Jakarta #put before build command 
 brunch ginkgo
