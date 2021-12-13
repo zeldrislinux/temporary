@@ -7,6 +7,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 . build/envsetup.sh
 lunch xperience_ginkgo-userdebug
 export TZ=Asia/Jakarta #put before last build command
+export SELINUX_IGNORE_NEVERALLOWS=true
 export BUILD_USERNAME=endi
 export BUILD_HOSTNAME=enprytna
 make bacon
