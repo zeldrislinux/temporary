@@ -7,7 +7,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 source build/envsetup.sh
 lunch amy_X00TD-userdebug
 export BUILD_USERNAME=venom
-export BUILD_HOSTNAME=carnage
+export BUILD_HOSTNAME=matanza
 export TZ=Asia/Tokyo #put before last build command
 mka bacon
 
