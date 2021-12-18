@@ -8,7 +8,7 @@ source build/envsetup.sh
 lunch lineage_X00TD-userdebug
 export SELINUX_IGNORE_NEVERALLOWS=true
 export SKIP_API_CHECKS=true
-export TZ=Asia/Jakarta #put before last build
+export TZ=Asia/Bangkok #put before last build
 make bacon
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
