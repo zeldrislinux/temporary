@@ -11,6 +11,7 @@ export BUILD_USER=android-build
 export BUILD_HOST=GeForce-RTX
 export BUILD_USERNAME=GeForce-RTX
 export BUILD_HOSTNAME=android_build
+export BUILD_BROKEN_DUP_RULES := true
 make xd
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
