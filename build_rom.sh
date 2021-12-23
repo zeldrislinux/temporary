@@ -3,7 +3,6 @@ repo init --depth=1 --no-repo-verify -u git://github.com/Komodo-OS/manifest -b 1
 git clone https://github.com/OFFICIAL-ZEUS/Manifest.git --depth 1 -b komo .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
-
 # build rom
 . build/envsetup.sh
 lunch komodo_tulip-userdebug
