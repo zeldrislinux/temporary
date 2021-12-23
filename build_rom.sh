@@ -6,7 +6,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 # build rom
 source build/envsetup.sh
 lunch xtended_X00TD-userdebug
-export TZ=Asia/Jakarta #put before last build
+export TZ=Asia/Bangkok #put before last build
 make xtended
 
 
