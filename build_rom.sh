@@ -3,7 +3,7 @@ repo init --depth=1 --no-repo-verify -u git://github.com/Project-Xtended/manifes
 git clone https://github.com/WallBreaker2407/local_manifest.git --depth 1 -b master .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
-# build rom
+# build rom 
 source build/envsetup.sh
 lunch xtended_X00T-userdebug
 export TZ=Asia/Jakarta #put before last build command
