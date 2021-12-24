@@ -5,7 +5,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 # build rom
 source build/envsetup.sh
-lunch xtended_X00TD-userdebug
+lunch xtended_X00T-userdebug
 export TZ=Asia/Jakarta #put before last build command
 export BUILD_USER=android-build
 export BUILD_HOST=GeForce-RTX
