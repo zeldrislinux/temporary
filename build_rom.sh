@@ -5,7 +5,8 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 # build rom
 source build/envsetup.sh
-lunch aosp_ginkgo-user
+lunch aosp_ginkgo-userdebug
+export SELINUX_IGNORE_NEVERALLOWS=tre
 export TZ=Asia/Jakarta #put before last command
 mka bacon
 
