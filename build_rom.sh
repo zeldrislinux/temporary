@@ -9,7 +9,7 @@ lunch legion_X00TD-userdebug
 export BUILD_USERNAME=kneba
 export BUILD_HOSTNAME=little-ani
 export ALLOW_MISSING_DEPENDENCIES=true
-export TZ=Asia/Tokyo #put before last build command
+export TZ=Asia/Bangkok #put before last build command
 make legion
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
