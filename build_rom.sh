@@ -5,7 +5,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 # build roms
 source build/envsetup.sh
-lunch dot_X00TD-eng
+lunch dot_X00TD-userdebug
 export TZ=Asia/Bangkok #put before last build command
 make bacon
 
