@@ -13,6 +13,7 @@ export BUILD_USERNAME=GeForce-RTX
 export BUILD_HOSTNAME=android_build
 export BUILD_BROKEN_DUP_RULES := true
 export SELINUX_IGNORE_NEVERALLOWS := true
+export WITH_GMS=true
 mka bacon
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
