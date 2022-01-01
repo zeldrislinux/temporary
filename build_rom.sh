@@ -11,7 +11,7 @@ export BUILD_USER=android-build
 export BUILD_HOST=GeForce-RTX
 export BUILD_USERNAME=GeForce-RTX
 export BUILD_HOSTNAME=android_build
-export WITH_GMS=true
+export WITH_GMS= true
 export BUILD_BROKEN_DUP_RULES := true
 export SELINUX_IGNORE_NEVERALLOWS := true
 mka bacon
