@@ -1,14 +1,11 @@
 # sync rom
 repo init --depth=1 --no-repo-verify -u git://github.com/crdroidandroid/android.git -b 12.0 -g default,-mips,-darwin,-notdefault
-git clone https://github.com/vytska69/Local-Manifests.git --depth 1 -b crd8 .repo/local_manifests
+git clone https://github.com/iamthecloverly/local_manifest.git --depth 1 -b crdroid .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
 source build/envsetup.sh
-lunch lineage_pine-userdebug
-export ALLOW_MISSING_DEPENDENCIES=true
-export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
-export SELINUX_IGNORE_NEVERALLOWS=true
+lunch lineage_RM6785-userdebug
 export TZ=Asia/Dhaka #put before last build command
 mka bacon
 
