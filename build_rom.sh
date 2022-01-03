@@ -8,6 +8,7 @@ source build/envsetup.sh
 export ALLOW_MISSING_DEPENDENCIES=true
 export PRODUCT_BROKEN_VERIFY_USES_LIBRARIES=true
 export RELAX_USES_LIBRARY_CHECK=true
+export SELINUX_IGNORE_NEVERALLOWS =true
 lunch potato_X00TD-userdebug
 export TZ=Asia/Kolkata #put before last build command
 brunch X00TD
