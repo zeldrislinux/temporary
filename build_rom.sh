@@ -1,11 +1,11 @@
 # sync rom
-repo init --depth=1 --no-repo-verify -u git://github.com/AospExtended/manifest.git -b 12.x -g default,-mips,-darwin,-notdefault
-git clone https://github.com/RasyidAlKautsar/local_manifest.git --depth 1 -b Aex-tmp .repo/local_manifests
+repo init --depth=1 --no-repo-verify -u https://github.com/Corvus-R/android_manifest.git -b 12 -g default,-mips,-darwin,-notdefault
+git clone https://github.com/RasyidAlKautsar/local_manifest.git --depth 1 -b Corvus .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
 source build/envsetup.sh
-lunch aosp_mido-userdebug
+lunch corvus_mido-userdebug
 export TZ=Asia/Jakarta #put before last build command
 m aex
 
