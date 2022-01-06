@@ -24,6 +24,6 @@ do
 	RESPONSE=$(curl -# -F "name=$FILENAME" -F "file=@$FILE" $PDSERVER/api/file)
 	FILEID=$(echo $RESPONSE | grep -Po '(?<="id":")[^"]*')
 
-	echo "Your file URL: $PDSERVER/u/$FILEID"
+	echo "Download URL: $PDSERVER/u/$FILEID"
 	echo ""
 done
