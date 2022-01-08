@@ -7,8 +7,8 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 source build/envsetup.sh
 lunch potato_X00TD-userdebug
 export SELINUX_IGNORE_NEVERALLOWS=true
-export BUILD_USERNAME=kneba
-export BUILD_HOSTNAME=android-build
+export PRODUCT_BROKEN_VERIFY_USES_LIBRARIES=true
+export RELAX_USES_LIBRARY_CHECK=true
 export TZ=Asia/Bangkok #put before last build command
 brunch X00TD
 
