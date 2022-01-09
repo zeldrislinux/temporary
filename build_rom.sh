@@ -6,6 +6,9 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 # build rom
 . build/envsetup.sh
 lunch aosp_vince-userdebug
+export KBUILD_BUILD_USER="rk134"
+export KBUILD_BUILD_HOST="CI-Lab"
+export SELINUX_IGNORE_NEVERALLOWS=true
 export TZ=Asia/Dhaka #put before last build command
 make bacon
 
