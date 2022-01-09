@@ -5,7 +5,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 # build rom
 source build/envsetup.sh
-lunch bliss_vayu-userdebug
+lunch bliss_ginkgo-userdebug
 export TZ=Asia/Jakarta #put before last build command
 export BUILD_USERNAME=endi
 export BUILD_HOSTNAME=enprytna
