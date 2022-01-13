@@ -5,7 +5,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 # build rom
 source build/envsetup.sh
-lunch aosp_pine-userdebug
+lunch aosp_mi439-userdebug
 export TZ=Asia/Singapore #put before last build command
 export RELAX_USES_LIBRARY_CHECK=true
 export WITH_GAPPS=true
