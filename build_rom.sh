@@ -6,7 +6,6 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 # build rom
 source build/envsetup.sh
 lunch arrow_Z01R-userdebug
-export SELINUX_IGNORE_NEVERALLOWS=truw
 export TZ=Asia/Kolkata 
 m bacon
  
