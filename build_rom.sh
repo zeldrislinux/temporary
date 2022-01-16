@@ -8,6 +8,7 @@ source build/envsetup.sh
 lunch aosp_pine-userdebug
 export TZ=Asia/Singapore #put before last build command
 export RELAX_USES_LIBRARY_CHECK=true
+export WITH_GAPPS=true
 make bacon
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
