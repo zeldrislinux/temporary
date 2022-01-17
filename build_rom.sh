@@ -1,9 +1,9 @@
 # sync rom
 repo init --depth=1 --no-repo-verify -u git://github.com/LineageOS/android.git -b lineage-18.1 -g default,-mips,-darwin,-notdefault
-git clone https://github.com/WalkingProjekt-juice/manifest --depth 1 -b los-18 .repo/local_manifests
+git clone https://github.com/Shelby434/manifest.git --depth 1 -b lineage-no-oss .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
-# build rom (27.11.21)
+# build rom
 source build/envsetup.sh
 lunch lineage_juice-userdebug
 export TZ=Europe/Samara
