@@ -1,6 +1,6 @@
 # sync rom
 repo init --depth=1 --no-repo-verify -u git://github.com/PixelExtended/manifest -b snow -g default,-mips,-darwin,-notdefault
-git clone https://github.com/sanjeevstunner/Manifest.git --depth 1 -b vayu_pex .repo/local_manifests
+git clone https://github.com/sanjeevstunner/Manifest.git --depth 1 -b vayu_aosp_parts .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
