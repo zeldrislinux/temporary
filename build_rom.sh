@@ -7,6 +7,8 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 source build/envsetup.sh
 lunch xtended_X00TD-userdebug
 export WITH_GAPPS=true
+export SKIP_API_CHECKS=true
+export SKIP_ABI_CHECKS=true
 export TZ=Asia/Bangkok #put before last build
 make xtended
 
