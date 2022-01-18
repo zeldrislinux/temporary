@@ -5,12 +5,9 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 # build roms
 source build/envsetup.sh
-export ALLOW_MISSING_DEPENDENCIES=true
-export PRODUCT_BROKEN_VERIFY_USES_LIBRARIES=true
-export RELAX_USES_LIBRARY_CHECK=true
-export SELINUX_IGNORE_NEVERALLOWS=true
 lunch potato_X00TD-userdebug
-export TZ=Asia/Bangkok #put before last build command
+export SELINUX_IGNORE_NEVERALLOWS=true
+export TZ=Asia/Jakarta #put before last build command
 brunch X00TD
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
