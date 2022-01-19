@@ -3,7 +3,7 @@ repo init --depth=1 --no-repo-verify -u git://github.com/AospExtended/manifest.g
 git clone https://github.com/WallBreaker2407/local_manifest.git --depth 1 -b aex .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
-# build rom
+# build rom 
 source build/envsetup.sh
 lunch aosp_X00TD-userdebug
 export TZ=Asia/Jakarta #put before last build command
