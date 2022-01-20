@@ -8,7 +8,7 @@ source build/envsetup.sh
 lunch aosp_X00TD-userdebug
 export TZ=Asia/Jakarta #put before last build command
 export BUILD_BROKEN_DUP_RULES := true
-PRODUCT_BROKEN_VERIFY_USES_LIBRARIES := true
+export PRODUCT_BROKEN_VERIFY_USES_LIBRARIES := true
 export SELINUX_IGNORE_NEVERALLOWS := true
 export WITH_GAPPS := true
 export BUILD_USERNAME=GeForce-RTX
